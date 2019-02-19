@@ -12,3 +12,13 @@ window.data= {
     return window.POKEMON.pokemon;
   }
 };
+
+// const filterPokemon=(pokemon,rule)=> pokemon ...;
+// const showBulbasaurName=(POKEMON)=>{
+//   return POKEMON.pokemon[0].name;
+// };
+//
+// window.example=example;
+// window.dataLovers={
+//   showBulbasaurName
+// }

@@ -1,18 +1,18 @@
 // El evento Load ejecuta el código que le sigue, cuando la página ha cargado toda (html, css ...)
 
-let PantallaPrincipal=document.getElementById("divPantallaPrincipal");
-let ListaPokemon=document.getElementById("divListaPokemon");
-let Pokedex=document.getElementById("divPokedex");
+let pantallaPrincipal=document.getElementById("divPantallaPrincipal");
+let listaPokemon=document.getElementById("divListaPokemon");
+let pokedex=document.getElementById("divPokedex");
 
 showMorePokemon.addEventListener('click', ()=> {
-    PantallaPrincipal.style.display="none";
-    Pokedex.style.display="none";
-    ListaPokemon.style.display="block";
+    pantallaPrincipal.style.display="none";
+    pokedex.style.display="none";
+    listaPokemon.style.display="block";
 
     let pokemonList; // Definición de variable para asignar el resultado de la función Obtener Pokemon
       pokemonList=data.getAllPokemon(); // Se solicita al objeto data una función con el arreglo con todos los pokemon
       let pokemonBox=document.getElementById("generalList"); //Se define variable para agregar datos en un div id=generaList
-      // pokemonBox.innerHTML="Pokemon Región Kanto";
+      //  pokemonBox.innerHTML="Pokemon Región Kanto";
       let htmlBox="";
       for (let contPokemon=0; contPokemon<pokemonList.length; contPokemon++){
   
@@ -26,88 +26,63 @@ showMorePokemon.addEventListener('click', ()=> {
   pokemonBox.innerHTML=htmlBox;
   
   
-    pokemonList.forEach(pokemon => {  // Código para poner el dropDown ó lista desplegable del objeto
-      let dropDownId=document.getElementById("pokeList");
-      let option = document.createElement("option");
-      option.text = pokemon.id;
-      dropDownId.add(option);
-  
-    });
-  
-  
   });
   
   // Funcion para buscar el pokemon
 
+  searchPokemon.addEventListener('click', ()=> {
 
-  //function getPokemon(data, condition){
-      let getPokemon=(data,condition) => {
+    pantallaPrincipal.style.display="none";
+    listaPokemon.style.display="none";
+    pokedex.style.display="block";
+
+  document.getElementById("searchBtn").addEventListener("click", searchPoke); 
+
+
+
+  function searchPoke(){
+
+    filterData(POKEMON.pokemon, document.getElementById("namePokemon").value);
+    document.getElementById("namePokemon").value="";
+  }
+
+  
+  
+
+
+      let filterData=(data,condition) => {  
     for(let i=0; i<data.length; i++){
       let pokemon = data[i];
       if (pokemon.name == condition) {
         printFirstData(pokemon);
-        // console.log(pokemon);
-        return pokemon.id;
-      }
+      
+       }
     }
   }
   
-  function searchPoke(){
+  
+ 
 
-    PantallaPrincipal.style.display="none";
-    Pokedex.style.display="block";
-    ListaPokemon.style.display="none";
 
-    console.log(document.getElementById("namePokemon").value);
-    getPokemon(POKEMON.pokemon, document.getElementById("namePokemon").value);
-    document.getElementById("namePokemon").value="";
-    // console.log(document.getElementById("namePokemon").value);
+
+  
+  
+   function printFirstData(pokemon){
+     let image=document.getElementById("info1");
+     let pokedex=document.getElementById("pokedexx");
+     
+     pokedex.innerHTML= "Nombre: " +  pokemon.name + "<br>" + "Número:  " + pokemon.num +
+                         "<br>" + "Tipo:  " + pokemon.type + "<br>" + "Altura:  " + pokemon.height +
+                         "<br>" + "Peso:  " + pokemon.weight + "<br>" + "Debilidade(s):  " + pokemon.weaknesses;
+     
+     image.setAttribute("src", ""+pokemon.img);
+
+
   }
-  // se corrige la llamada al boton
-  document.getElementById("searchPokemon").addEventListener("click", searchPoke)
-  
-  
-  function printFirstData(pokemon){
-    document.getElementById("info").innerHTML=pokemon.name;
-    document.getElementById("info1").src=pokemon.img;
-  setattributes
-  }
-  // -----------------------------------------------------------
-  
-  // function getName(){
-  //   let result="";
-  //   let resultid="";
-  //   let resultimagen="";
-  //   let pokemonList; // Definición de variable para asignar el resultado de la función Obtener Pokemon
-  //   pokemonList=data.getAllPokemon(); // Se solicita al objeto data una función con el arreglo con todos los pokemon
-  //   resultimagen="img";
-  //   pokemonList[name]="";
-  //   console.log(pokemonList);
-  //
-  //   let namePokemon=document.getElementById("namePokemon").value;
-  //
-  //   console.log(namePokemon);
-  //   for(let i=0; i<pokemonList.length; i++){
-  //     console.log(pokemonList[i]);
-  //     if (pokemonList[i].name == namePokemon) {
-  //       result=pokemonList[i].name;
-  //       resultid=pokemonList[i].id;
-  //       resultimagen=pokemonList.img;
-  //       console.log(result);
-  //     }
-  //     let resultado=result + " " + resultid + " " + resultimagen;
-  //     console.log(resultado);
-  //     return resultado;
-  //   }
-  //
-  // }
-  //
-  // document.getElementById("searchBtn").addEventListener("click",getName);
-  
-  
-  
-  
-  
+
+
+});
+ 
   // -------------------------------- para las imagenes-----------------
   var slideIndex = 1;
   showSlides(slideIndex);

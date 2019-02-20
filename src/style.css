@@ -141,3 +141,12 @@ img {
   height: 60px;
 
 }
+
+.pokedex{
+  display:none;
+}
+@media screen (max-width: 1024px) and (min-width: 780px) {
+  .border {
+    
+  }
+}

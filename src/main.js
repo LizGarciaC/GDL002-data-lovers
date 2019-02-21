@@ -46,7 +46,7 @@ showMorePokemon.addEventListener('click', ()=> {
 
   function searchPoke(){
     let pokemon;
-    pokemon=data.filterData(document.getElementById("namePokemon").value);
+    pokemon=data.filterData(window.POKEMON.pokemon,document.getElementById("namePokemon").value);
     printFirstData(pokemon);
     document.getElementById("namePokemon").value="";
   }

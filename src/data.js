@@ -5,9 +5,10 @@ window.data= {
     return window.POKEMON.pokemon;
   },
 
-  filterData:(namePokemon) =>{
-    for(let i=0; i<window.POKEMON.pokemon.length; i++){
-      let pokemon = window.POKEMON.pokemon[i];
+  filterData:(data,namePokemon) =>{
+    console.log(data,namePokemon);
+    for(let i=0; i<data.length; i++){
+      let pokemon = data[i];
       if(pokemon.name == namePokemon){
         return pokemon;
       }

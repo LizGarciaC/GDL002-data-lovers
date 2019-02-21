@@ -3,97 +3,94 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Pokémon for Dummies</title>
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/188/188987.png">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- <h1>Pokemon for Dummies</h1> -->
+  <img src="pokemon4dummies.jpg" width="100%">
 
-  <img src="C:\Users\iagui\Documents\Lab_proyecto\GDL002-data-lovers\src\pokemon4dummies.jpg" width="100%">
+    <header class="border">
+      <a class="active" href="#Home" id="home">Home</a>
+      <!-- <span>ABOUT</span> -->
+    </header>
 
-   <div class="border">
-     <!-- <button type="button" name="button" id="btnAbout"> About </button> -->
-   </div>
 <br>
 
-<div class="pantallaPrincipal"> <!--     ************************DIV IMAGENES Y BOTONES ************************************        -->
+<!-- ************************ DIV IMAGENES Y BOTONES ************************************-->
 
-    <div class="slideshow-container">
-      <div class="mySlides fade">
-        <!-- <div class="numberText"> 1/3</div> -->
-        <img src="https://static.turbosquid.com/Preview/2016/07/14__13_34_28/Pikachu_02.pngEBBC6643-21BC-4524-88D0-BAFDF17C6823Original.jpg" width="100%">
-        <div class="text">SABIAS QUE.. <br>
-          <p>Origen de Pikachu <br>
-              La criatura más popular del juego es Pikachu, que es una combinación de la onomatopeya japonesa pikapika (chispa) <br>
-              y el sonido de un chirrido, que se expresa como Chuchu.</p>
+
+    <div  id="divPantallaPrincipal" class="pantallaPrincipal">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <!-- <div class="numberText"> 1/3</div> -->
+          <img src="https://static.turbosquid.com/Preview/2016/07/14__13_34_28/Pikachu_02.pngEBBC6643-21BC-4524-88D0-BAFDF17C6823Original.jpg"
+               width="100%">
+          <div class="text"><strong> SABIAS QUE.. </strong>  <br>
+            <p> <em>Origen de Pikachu</em>  <br>
+                La criatura más popular del juego es Pikachu, que es una combinación de la onomatopeya japonesa pikapika (chispa) <br>
+                y el sonido de un chirrido, que se expresa como Chuchu.</p>
+          </div>
         </div>
-      </div>
 
         <div class="mySlides  fade">
           <!-- <div class="numberText"> 2/3</div> -->
-            <img src="https://vrzone.com/wp-content/uploads/2016/11/landscape-1456483171-pokemon2.jpg" width="100%">
-            <div class="text">SABIAS QUE.. <br>
-            <p>Naturaleza del juego <br>
-              Algunos pokémons evolucionan luego de que son intercambiados. Se piensa que estas evoluciones fueron causadas por miedo al abandono,
-              y de que el pokémon está tratando de mejorar para que sus dueños lo quieran de nuevo.</p>
-            </div>
+          <img src="https://vrzone.com/wp-content/uploads/2016/11/landscape-1456483171-pokemon2.jpg" width="100%">
+          <div class="text"><strong> SABIAS QUE.. </strong> <br>
+          <p> <em>Naturaleza del juego</em> <br>
+            Algunos pokémons evolucionan luego de que son intercambiados. Se piensa que estas evoluciones fueron causadas por miedo al abandono,
+            y de que el pokémon está tratando de mejorar para que sus dueños lo quieran de nuevo.</p>
           </div>
+        </div>
 
-          <div class="mySlides fade">
-            <!-- <div class="numberText"> 3/3</div> -->
-              <img src="https://cdn3.cnet.com/img/dEN-zxk7Szx3xsJa1CW6JheRrTA=/936x527/2016/07/08/a47441e3-c3d0-485f-b5ae-c0e30cea33e0/foto14.jpg" width="100%">
-              <div class="text">SABIAS QUE.. <br>
-              <p> Monedas de colección <br>
-                Una pequeña nación del Pacífico Sur llamada Niue emitió en 2001 una serie de monedas de dólar que contó con la imagen de varios pokémons:
-                Pikachu, Meowth, Squirtle, Bulbasaur y Charmander.</p>
-              </div>
-            </div>
+        <div class="mySlides fade">
+        <!-- <div class="numberText"> 3/3</div> -->
+          <img src="https://cdn3.cnet.com/img/dEN-zxk7Szx3xsJa1CW6JheRrTA=/936x527/2016/07/08/a47441e3-c3d0-485f-b5ae-c0e30cea33e0/foto14.jpg" width="100%">
+          <div class="text"><strong> SABIAS QUE.. </strong> <br>
+          <p> <em>Monedas de colección</em> <br>
+            Una pequeña nación del Pacífico Sur llamada Niue emitió en 2001 una serie de monedas de dólar que contó con la imagen de varios pokémons:
+            Pikachu, Meowth, Squirtle, Bulbasaur y Charmander.</p>
+          </div>
+        </div>
 
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
 
-              </div>
-                <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
 
-                  <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                  </div>
-
-                    <div class="btn">
-                        <button type="button" name="button" id=showMorePokemon>Ver más Pokémon</button>
-                        <button type="button" name="button" id=searchPokemon>Busca un pokémon en la PokéDex</button>
-                    </div>
- </div>  <!-- ******************************** Termina DIV pantalla principal-*************************************-->
-
-
-<div class="ListaPokemon">    <!-- *************************  DIV LISTA DE TODOS LOS POKEMON-*************************************-->
-    <div class="PokemonImgs">
-      <div id="generalList"></div>
+      <div>
+          <button class="btn" type="button" name="showMorePokemon" id="showMorePokemon">Ver más Pokémon</button>
+          <button class="btn" type="button" name="searchPokemon" id="searchPokemon">Busca un pokémon en la PokéDex</button>
+      </div>
     </div>
-</div>                <!-- *************************   TERMINA DIV LISTA DE TODOS LOS POKEMON-*************************************-->
+    <!-- ************************ Termina DIV pantalla principal-****************************-->
 
+<!-- ************************ DIV LISTA DE TODOS LOS POKEMON-****************************-->
+    <div id="divListaPokemon" class="ListaPokemon">
+      <div class="PokemonImgs">
+        <div id="generalList"></div>
+      </div>
+    </div>
+    <!-- ************************ TERMINA DIV LISTA DE TODOS LOS POKEMON-********************-->
 
-<div class="pokedex"> <!-- *************************  DIV BUSCAR POKEMON EN LA POKEDEX-*************************************-->
-  <!-- <select name="pokeList" id="pokeList"></select> -->
-  <label for="pokemonName">Escribe el nombre del pokemon</label>
-  <input type="text" name="pokemonName" id="namePokemon">
-  <button type="submit" name="button" id="searchBtn">Buscar</button>
+    <!-- ************************ DIV BUSCAR POKEMON EN LA POKEDEX-**************************-->
+    <div id="divPokedex" class="pokedex">
+      <label for="pokemonName">Escribe el nombre del pokemon</label>
+      <input type="text" name="pokemonName" id="namePokemon">
+      <button type="submit" name="button" id="searchBtn">Buscar</button>
+      <div id="pokedexx"></div>
+      <img  id="imgPokemon">
+    </div>
+    <!-- ************************ TERMINA DIV BUSCAR POKEMON EN LA POKEDEX-******************-->
+<!--******************************************CREAR LA POKEDEX ******************** -->
 
-  <textarea name="name" rows="8" cols="80" id="info"></textarea>
-  <div id="info1">
-
-
-
-  </div>
-  <!-- <input type="text" name="" value="" id="info"> -->
-  <!-- <input type="text" name="" value="" id="info1"> -->
-
-</div><!-- *************************   TERMINA DIV BUSCAR POKEMON EN LA POKEDEX-*************************************-->
-
-
-
+<!-- <select name="pokeList" id="pokeList"></select> -->
 
     <div id="root"></div>
     <script src="./data/pokemon/pokemon.js"></script>

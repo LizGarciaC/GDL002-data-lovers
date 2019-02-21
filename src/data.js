@@ -1,16 +1,19 @@
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
-
-// const example = () => {
-//   return 'example';
-// };
-//
-// window.example = example;
 
 window.data= {
+
   getAllPokemon:()=>{
     return window.POKEMON.pokemon;
+  },
+
+  filterData:(namePokemon) =>{
+    for(let i=0; i<window.POKEMON.pokemon.length; i++){
+      let pokemon = window.POKEMON.pokemon[i];
+      if(pokemon.name == namePokemon){
+        return pokemon;
+      }
+    }
   }
+
 };
 
 // const filterPokemon=(pokemon,rule)=> pokemon ...;

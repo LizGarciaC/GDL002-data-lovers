@@ -1,6 +1,7 @@
 /* ---------------------- para las imagenes -------------------------------- */
-img {
+.logo-img{
   vertical-align: middle;
+      max-width: 300px;
 }
 /* Slideshow container */
 .slideshow-container {
@@ -102,6 +103,8 @@ img {
   color: white;
   font-size: 40px;
   margin-left: 2%;
+  font-family: Garamond;
+  font-style: normal;
 }
 
 /* ----------------- botones (ver más pokemon y buscar pokedex) --------------*/
@@ -115,9 +118,9 @@ img {
   display: inline-block;
   cursor: pointer;
   border-radius: 8px;
-  ffont-family:'Bookman, URW Bookman L', serif;
+  font-family:Garamond;
   font-size: 16px;
-  box-shadow: 0 9px #4169E1;
+  /* box-shadow: 0 9px #4169E1; */
 }
 
 .btn:hover {
@@ -125,20 +128,23 @@ img {
 }
 
 /* --------------------------- Listado de pokemons --------------------------- */
-.PokemonImgs{
+.pokemonImgs{
   width: 50%;
-  height: 70%;
-  /* position: relative; */
-  font-family: 'Arial', sans-serif;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #424242;
-  margin: 10px;
+  font-family: Garamond;
+  font-size: 18px;
   margin-left: 20%;
-  border-radius: 2px;
-}
+  border: 5px solid #fff;
+  color: #424242;
+  text-align: justify;
 
+}
+.pokemonImgs img{
+  height: 135px;
+}
 /* -------------------------------------POKEDEX ------------------------- */
+.algo {
+  display: inline-block;
+  margin: 15px;
+  padding: 5px;
+  border: solid 1px blue
+}

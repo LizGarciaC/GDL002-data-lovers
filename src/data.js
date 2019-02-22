@@ -5,7 +5,8 @@ window.data= {
     return window.POKEMON.pokemon;
   },
 
-  filterData:(data,namePokemon) =>{
+
+  filterData: (data,namePokemon) =>{
     console.log(data,namePokemon);
     for(let i=0; i<data.length; i++){
       let pokemon = data[i];
@@ -13,7 +14,8 @@ window.data= {
         return pokemon;
       }
     }
-  }
+  },
+
 
 };
 

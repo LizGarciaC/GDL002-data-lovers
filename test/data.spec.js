@@ -1,5 +1,5 @@
 require('../src/data.js');
-const pokemon = require('../src/data/pokemon/pokemon.json');
+// const pokemon = require('../src/data/pokemon/pokemon.json');
 
 // describe('example', () => {
 //   it('is a function', () => {

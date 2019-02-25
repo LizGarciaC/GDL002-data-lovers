@@ -1,17 +1,79 @@
 /* ---------------------- para las imagenes -------------------------------- */
-.logo-img{
-  vertical-align: middle;
-      max-width: 300px;
+@media only screen and (max-width:320px) {
+  .logoImg, .pokedex{
+    width: 80%;
+    height: 80%;
+  }
 }
-/* Slideshow container */
+
+@media only screen and (max-width:768px) {
+  .logoImg{
+    width: 80%;
+    height: 80%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .logoImg, .border{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* -------------------- Contenedor de la imagen pokemon for dummies--------- */
+  .containerImgLogo{
+  display: flex;
+  justify-content: center;
+   }
+
+/* ----------------------------nav (home) -------------------------------- */
+   .borderMenuPrincipal{
+     background: #F0F8FF;
+     border-width: 100%;
+     height: 100%;
+   }
+
+   .menuPrincipal ul{
+     display: flex;
+     padding: 0;
+     margin: 0;
+     list-style: none;
+     border-width: 100%;
+     height: auto;
+   }
+
+   .menuPrincipal  a{
+     display: block;
+     background-color:dodgerblue;
+     text-decoration: none;
+     color:white;
+     width: auto;
+     height: auto;
+     font-family:Garamond;
+     font-size: 5vw;
+   }
+
+   .menuPrincipal a:hover{
+     background-color: #FFD700;
+   }
+
+   .menuPrincipal ul li ul {
+     display: none;
+   }
+
+   .menuPrincipal ul li a:hover + ul, .menuPrincipal ul li ul:hover{
+     display: block;
+   }
+
+/* --------------------------imagens del slide-----------------------------  */
+
+/* * Slideshow container */
 .slideshow-container {
-  max-width: 800px;
-  position: relative;
+  max-width: 800px;ition: relative;
   margin: auto;
 }
 
 /* Next & previous buttons */
-.prev, .next {
+/* .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -24,18 +86,18 @@
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-}
+} */
 
 /* Position the "next button" to the right */
-.next {
+/* .next {
   right: 0;
   border-radius: 3px 0 0 3px;
-}
+} */
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+/* .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
-}
+} */
 
 /* Caption text */
 .text {
@@ -44,16 +106,7 @@
   padding: 2px 16px;
   color: white;
   font-family:'Bookman, URW Bookman L', serif;
-  font-size: 16px;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+  font-size: 1.5vw;
 }
 
 /* The dots/bullets/indicators */
@@ -90,36 +143,29 @@
   to {opacity: 1}
 }
 
-/* ----------------------------header (home) -------------------------------- */
-.border{
-  background: dodgerblue;
-  top: 20px;
-  border-width: 100%;
-  height: 60px;
-}
 
-.border a.active {
-  background-color: dodgerblue;
-  color: white;
-  font-size: 40px;
-  margin-left: 2%;
-  font-family: Garamond;
-  font-style: normal;
-}
 
 /* ----------------- botones (ver más pokemon y buscar pokedex) --------------*/
-.btn{
+.showBtnPrincipal{
+  flex-direction: column;
+  max-width: 20%;
+  max-height: 10%;
+  float:left;
+  align-content: space-between;
+}
+.showBtnPrincipal button.btn{
   background-color: dodgerblue;
   border: none;
   color: white;
   padding: 15px 10px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  /* text-decoration: none; */
+  /* display: inline-block; */
   cursor: pointer;
   border-radius: 8px;
   font-family:Garamond;
-  font-size: 16px;
+  font-size: 1.5vw;
+
   /* box-shadow: 0 9px #4169E1; */
 }
 
@@ -128,7 +174,7 @@
 }
 
 /* --------------------------- Listado de pokemons --------------------------- */
-.pokemonImgs{
+.listPokemon{
   width: 50%;
   font-family: Garamond;
   font-size: 18px;
@@ -136,15 +182,20 @@
   border: 5px solid #fff;
   color: #424242;
   text-align: justify;
+  display: none;
+}
 
-}
-.pokemonImgs img{
-  height: 135px;
-}
-/* -------------------------------------POKEDEX ------------------------- */
-.algo {
+.pokemonImgs {
   display: inline-block;
   margin: 15px;
   padding: 5px;
   border: solid 1px blue
 }
+
+.pokemonImgs:hover{
+  background-color: yellow;
+}
+/* .pokemonImgs img{
+  height: 135px;
+} */
+/* -------------------------------------POKEDEX ------------------------- */

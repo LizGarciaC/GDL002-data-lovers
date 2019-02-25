@@ -8,39 +8,58 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-  <img src="pokemon4dummies.jpg" class="logo-img">
-
-    <header class="border">
-
-      <a class="active" href="#Home" id="home">Home</a>
-
-      <div>
-           <button class="btn" type="button" name="showMorePokemon" id="showMorePokemon">Ver más Pokémon</button>
-           <button class="btn" type="button" name="searchPokemon" id="searchPokemon">Busca un pokémon en la PokéDex</button>
-       </div>
-      <!-- <span>ABOUT</span> -->
-    </header>
-
+  <div class="containerImgLogo">
+    <img src="pokemon4dummies.jpg" class="logoImg">
+  </div>
 <br>
 
-<!-- ************************ DIV IMAGENES Y BOTONES ************************************-->
+<!-- ************************ SECTION HOME  ************************************-->
+<section class="borderMenuPrincipal">
+  <nav class="menuPrincipal" >
+    <ul>
+      <li><a  href="#Home" id="home">Home</a>
+        <ul>
+          <li><a  href="#" id="showMorePokemon">Ver más Pokémon</a></li>
+          <li><a  href="#" id="searchPokemon">Busca un pokémon</a></li>
+          <li><a  href="#" id="showAbout">About</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</section>
+<!-- ************************ TERMINA SECTION HOME  ************************************-->
+<br>
+<!-- ************************ DIV IMAGENES  ************************************-->
+<div id="aboutPokemon" class="aboutPokemon">
+  <div class="text">
+  <p><h2>Pokemon for Dummies</h2>
+    Es una página que te permite introducirte al fascinante
+    mundo de los Pokémon. Aqui podrás encontrar detalles sobre lo que son,
+    cuántos y cuáles son sus características a travez de las diferentes secciones
+    de la página.</p>
+  <p><h3>Acerca de las secciones:</h3></p>
+  <p><em>Busca tu Pókemon.</em>
+     En esta sección podrás realizar busquedas personalizadas de cualquiera de los
+     150 Pokémon, el resultado de la busqueda te arrojará los detalles más
+     importantes del Pokémon buscado incluyendo su imágen.</p>
+    <p><em>Ver más Pokémon.</em>
+        Aqui podrás ver la lista completa de los 150 Pokémon con su imagen y nombre.</p>
+  </div>
+</div>
+<!-- <div  id="slider" ></div> -->
+ <section  id="divPantallaPrincipal" class="pantallaPrincipal">
 
-
-<div  id="divPantallaPrincipal" class="pantallaPrincipal">
-        <div class="slideshow-container">
-        <div class="mySlides fade">
-          <!-- <div class="numberText"> 1/3</div> -->
-        <img src="https://media.shoanime.com/2017/10/pokeport-750x450.jpg"
-               width="100%">
-          <div class="text"><strong> SABIAS QUE.. </strong>  <br>
-            <p> <em>Origen de Pikachu</em>  <br>
-                La criatura más popular del juego es Pikachu, que es una combinación de la onomatopeya japonesa pikapika (chispa) <br>
+        <div class="slideshow-container" id="slidesContainer">
+          <div class="mySlides fade">
+            <img src="https://media.shoanime.com/2017/10/pokeport-750x450.jpg" width="100%">
+            <div class="text"><strong> SABIAS QUE.. </strong>  <br>
+                <p> <em>Origen de Pikachu</em>  <br>
+                La criatura más popular del juego es Pikachu, que es una combinación de la onomatopeya japonesa pikapika (chispa)
                 y el sonido de un chirrido, que se expresa como Chuchu.</p>
-        </div>
-        </div>
+            </div>
+         </div>
 
         <div class="mySlides  fade">
-          <!-- <div class="numberText"> 2/3</div> -->
           <img src="https://vrzone.com/wp-content/uploads/2016/11/landscape-1456483171-pokemon2.jpg" width="100%">
           <div class="text"><strong> SABIAS QUE.. </strong> <br>
           <p> <em>Naturaleza del juego</em> <br>
@@ -50,7 +69,6 @@
         </div>
 
         <div class="mySlides fade">
-        <!-- <div class="numberText"> 3/3</div> -->
           <img src="https://cdn3.cnet.com/img/dEN-zxk7Szx3xsJa1CW6JheRrTA=/936x527/2016/07/08/a47441e3-c3d0-485f-b5ae-c0e30cea33e0/foto14.jpg" width="100%">
           <div class="text"><strong> SABIAS QUE.. </strong> <br>
           <p> <em>Monedas de colección</em> <br>
@@ -59,12 +77,13 @@
           </div>
         </div>
 
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      </div>
+              <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+      <!-- </div>  termina class="slideshow-container"-->
+
       <br>
 
-      <div style="text-align:center">
+      <div style="text-align:center" >
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
@@ -74,14 +93,14 @@
           <button class="btn" type="button" name="showMorePokemon" id="showMorePokemon">Ver más Pokémon</button>
           <button class="btn" type="button" name="searchPokemon" id="searchPokemon">Busca un pokémon en la PokéDex</button>
       </div> -->
-</div>
+</section>
     <!-- ************************ Termina DIV pantalla principal-****************************-->
 
     <!-- ************************ DIV LISTA DE TODOS LOS POKEMON-****************************-->
-  <section id="divListaPokemon" class="ListaPokemon" >
+  <section id="divListaPokemon" class="listPokemon" >
 
         <div id="divOrdenAlfabetico" class="">
-            <!-- <button type="button" id="orderAlpha">Ordenar Alfabéticamente</button> -->
+            <button type="button" id="btnOrderAlpha">Ordenar Alfabéticamente</button>
           </div>
       <!--    <div class="pokemonImgs"> -->
             <div id="generalList">
@@ -90,19 +109,26 @@
   </section>
     <!-- ************************ TERMINA DIV LISTA DE TODOS LOS POKEMON-********************-->
 
-    <!-- ************************ DIV BUSCAR POKEMON EN LA POKEDEX-**************************-->
+    <!-- ************************ DIV BUSCAR POKEMON **************************-->
     <div id="divPokedex" class="pokedex">
-      -- Escribir la primera letra en MAYÚSCULA y las demás en minúsculas. --<br>
+       Escribir la primera letra en MAYÚSCULA y las demás en minúsculas. <br>
       <label for="pokemonName">Escribe el nombre del pokemon</label>
       <input type="text" name="pokemonName" id="namePokemon">
       <button type="submit" name="button" id="searchBtn">Buscar</button>
       <div id="pokedexx"></div>
        <img  id="imgPokemon">
      </div>
-    <!-- ************************ TERMINA DIV BUSCAR POKEMON EN LA POKEDEX-******************-->
+
+     <!-- <label for="search">Buscar</label>
+     <input type="text" placeholder="Encuetra un Pokemon" list="pokeList" id="search" data-list-filter="^">
+      <datalist id="pokeList">  </datalist>  -->
+       <!-- <select name="pokeList" id="pokeList">Selecciona</select>
+       <input type="button" id="forca" name="forc" value="Grabar Datos" class="boton"> -->
+
+    <!-- ************************ TERMINA DIV BUSCAR POKEMON ******************-->
+
 <!--******************************************CREAR LA POKEDEX ******************** -->
 
-<!-- <select name="pokeList" id="pokeList"></select> -->
 
     <div id="root"></div>
     <script src="./data/pokemon/pokemon.js"></script>

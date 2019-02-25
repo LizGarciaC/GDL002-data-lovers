@@ -16,6 +16,21 @@ window.data= {
     }
   },
 
+  sortData:(sortBy, sortOrder) =>{
+    let orderedPokemon;
+    orderedPokemon=window.POKEMON.pokemon.sort((a,b)=>{
+      if (a.name > b.name){
+        return 1;
+      }
+      if (a.name < b.name){
+        return -1;
+      }
+      return 0;
+    });
+    return orderedPokemon;
+  }
+
+
 
 };
 

@@ -28,7 +28,22 @@ window.data= {
       return 0;
     });
     return orderedPokemon;
-  }
+  },
+
+  computeData : (pokemonName, powerCombat) => {
+   let res = 0;
+   window.POKEMON.pokemon.forEach(element => {
+     if (element.name == pokemonName){
+       if (element.multipliers != null){
+         res = element.multipliers[0] * powerCombat;
+       }
+       else{
+         res="Este pokémon no cuenta con posibilidades extra para combate";
+       }
+     }
+   });
+   return res;
+ }
 
 
 

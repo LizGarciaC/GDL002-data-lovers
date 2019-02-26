@@ -3,6 +3,8 @@ let listaPokemon=document.getElementById("divListaPokemon");
 let pokedex=document.getElementById("divPokedex");
 let ordenAlfabetico=document.getElementById("divOrdenAlfabetico");
 let aboutPokemon=document.getElementById("aboutPokemon");
+let showAbout=document.getElementById("showAbout");
+let clearBtn=document.getElementById("clearBtn");
 
 pokedex.style.display="none";
 aboutPokemon.style.display="none";
@@ -23,18 +25,23 @@ let home=document.getElementById("home");
   ordenAlfabetico.style.display="none";
   aboutPokemon.style.display="none";
   pantallaPrincipal.style.display="block";
+  location.reload(true);
 });
 
-// clearBtn.addEventListener('click', ()=> {
-//   alert("entra");
-//   document.getElementById('imgPokemon').reset();
-// });
+document.getElementById("clearBtn").addEventListener("click", reset);
+
+function reset(){
+       document.getElementById("pokedexx").innerHTML="";
+       document.getElementById("txtResPC").innerHTML="";
+  let  remove=document.getElementById("imgPokemon");
+       remove.parentNode.removeChild(remove);
+}
 
 let showMorePokemon=document.getElementById("showMorePokemon");
 
    showMorePokemon.addEventListener('click', ()=> {
     pantallaPrincipal.style.display="none";
-    pokedex.style.display="none";
+    // pokedex.style.display="none";
   //  ordenAlfabetico.style.display="none";
     listaPokemon.style.display="block";
 
@@ -51,9 +58,10 @@ let showMorePokemon=document.getElementById("showMorePokemon");
 
 });
 
+
+// Funcion para buscar el pokemon
 let searchPokemon=document.getElementById("searchPokemon");
 
-  // Funcion para buscar el pokemon
   searchPokemon.addEventListener('click', ()=> {
 
     pantallaPrincipal.style.display="none";
@@ -63,33 +71,50 @@ let searchPokemon=document.getElementById("searchPokemon");
 
   document.getElementById("searchBtn").addEventListener("click", searchPoke);
 
-  function searchPoke() {
+  function searchPoke(){
     let pokemon,
-        namePokemon=document.getElementById("namePokemon");
-    if(namePokemon.value==""){
+
+        namePokemon=document.getElementById("namePokemon").value;
+        namePokemon=namePokemon.charAt(0).toUpperCase() + namePokemon.slice(1);
+    if(namePokemon == ""){
       alert("Escriba el nombre de un pokemon. Ej. Pikachu");
       namePokemon.value="";
-      namePokemon.focus();
-    }else
-    pokemon=data.filterData(window.POKEMON.pokemon,document.getElementById("namePokemon").value);
-    printFirstData(pokemon);
-    document.getElementById("namePokemon").value="";
-  }
-
-  function printFirstData(pokemon){
-
-       let image=document.getElementById("imgPokemon");
-       let pokedex=document.getElementById("pokedexx");
-
-             pokedex.innerHTML= ` <strong>Nombre:  </strong>${pokemon.name} <br/> <strong>Número:  </strong>${pokemon.num}    <br/>
-                                  <strong>Tipo:    </strong>${pokemon.type} <br/> <strong>Altura:  </strong>${pokemon.height} <br/>
-                                  <strong>Peso:    </strong>${pokemon.weight} <br/> <strong>Debilidade(s):  </strong> ${pokemon.weaknesses}`;
-
-            image.setAttribute("src", ""+pokemon.img);
+      document.getElementById("namePokemon").focus();
+    }else {
+      pokemon=data.filterData(window.POKEMON.pokemon,namePokemon);
+      // pokemon=data.filterData(window.POKEMON.pokemon,document.getElementById("namePokemon").value);
+      printFirstData(pokemon);
+      document.getElementById("namePokemon").value="";
     }
 
-  });
+  }
 
+  function printFirstData(pokemon) {
+
+  let image = document.getElementById("imgPokemon");
+  let pokedex = document.getElementById("pokedexx");
+
+  pokedex.innerHTML = ` <strong>Nombre:  </strong><span id='selectedPokemon'>${pokemon.name}</span> <br/> <strong>Número:  </strong>${pokemon.num}    <br/>
+                                <strong>Tipo:    </strong>${pokemon.type} <br/> <strong>Altura:  </strong>${pokemon.height} <br/>
+                                <strong>Peso:    </strong>${pokemon.weight} <br/> <strong>Debilidade(s):  </strong> ${pokemon.weaknesses}`;
+
+  image.setAttribute("src", "" + pokemon.img);
+}
+
+});
+// calculo de puntos de combate
+  let btnCalcularPC = document.getElementById("btnCalcularPC");
+  let txtPC = document.getElementById("txtPC");
+  let txtResPC = document.getElementById("txtResPC");
+
+  btnCalcularPC.addEventListener("click",()=>{
+   let pokemon;
+   pokemon = document.getElementById("selectedPokemon").innerHTML;
+   let powerCombat = txtPC.value;
+   let resPC = data.computeData(pokemon, powerCombat);
+   txtResPC.innerHTML = resPC;
+   txtPC.value="";
+  });
 
   // ORDENAR Alfabéticamente
   let orderAlpha=document.getElementById("btnOrderAlpha");
@@ -97,7 +122,7 @@ let searchPokemon=document.getElementById("searchPokemon");
     console.log("ENTRO");
     let pokemonList;
     pokemonList = data.sortData("name", true);
-    let pokemonBox=document.getElementById("generaList");
+    let pokemonBox=document.getElementById("generalList");
     let htmlBox="";
     for (let contPokemon=0; contPokemon<pokemonList.length; contPokemon++){
       htmlBox += `<section class="pokemonImgs"><span>${pokemonList[contPokemon].num} ${pokemonList[contPokemon].name}
@@ -106,23 +131,34 @@ let searchPokemon=document.getElementById("searchPokemon");
     pokemonBox.innerHTML=htmlBox;
   });
 
+
+
+
+
+
+
     // -------------------------------- para las imagenes-----------------
 
 let slideIndex = 1;
 showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// let dots=document.getElementByClassName("dot");
+// currentSlide(n);
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
+// let currentSlide=document.getElementById("currentSlide");
+// currentSlide.addEventListener("click" ()=> {
+//   for(let i=0; i<dot.length; i++)
+//   dots[i].className = dots[i].className.replace(" active", "");
+//   showSlides(slideIndex = dot[i]);
+// });
 
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
+  let currentSlide=0;
   if (n > slides.length) {slideIndex = 1; }
   if (n < 1) {slideIndex = slides.length;}
   for (i = 0; i < slides.length; i++) {

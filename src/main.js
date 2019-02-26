@@ -31,10 +31,14 @@ let home=document.getElementById("home");
 document.getElementById("clearBtn").addEventListener("click", reset);
 
 function reset(){
+
        document.getElementById("pokedexx").innerHTML="";
        document.getElementById("txtResPC").innerHTML="";
+       // document.getElementById("imagPokedex").innerHTML="";
   let  remove=document.getElementById("imgPokemon");
-       remove.parentNode.removeChild(remove);
+  let clear="";
+       // remove.parentNode.removeChild(remove);
+       remove.parentNode.replaceChild(clear);
 }
 
 let showMorePokemon=document.getElementById("showMorePokemon");

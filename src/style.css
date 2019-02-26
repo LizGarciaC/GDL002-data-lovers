@@ -202,7 +202,12 @@ margin-bottom: 10%;
 }
 
 .info{
-  margin-left: 20%;
+  margin-left: 10%;
+}
+
+.clear{
+  /* margin-top: 20%; */
+margin-right: auto;
 }
 /* --------------------------- Listado de pokemons --------------------------- */
 .inputDesign{
@@ -211,7 +216,11 @@ margin-bottom: 10%;
   padding: 5px 0 0 0;
   margin: 0 auto;
 }
-
+.txtResultPC{
+  /* text-align: center; */
+  margin-left:50%;
+  font-size: 1.5vw;
+}
 
 .listPokemon{
   width: 50%;
@@ -248,6 +257,7 @@ margin-bottom: 10%;
   padding: 0;
   align-items: center;
 }
+
 .Pokedex{
     width:auto;
     height:50%;

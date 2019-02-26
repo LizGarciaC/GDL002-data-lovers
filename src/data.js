@@ -36,6 +36,7 @@ window.data= {
      if (element.name == pokemonName){
        if (element.multipliers != null){
          res = element.multipliers[0] * powerCombat;
+         res="El rango estimado de PC es: " + res;
        }
        else{
          res="Este pokémon no cuenta con posibilidades extra para combate";

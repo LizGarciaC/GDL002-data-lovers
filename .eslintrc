@@ -10,6 +10,8 @@
     "cipher": false,  # aqui poner nuestro objeto global
     "dataLovers": false, # ejemplo
     "data": false,
+    
+
   },
   "rules": {
     "no-console": 0,

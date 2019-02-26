@@ -108,43 +108,24 @@
     <!-- ************************ TERMINA DIV LISTA DE TODOS LOS POKEMON-********************-->
 
     <!-- ************************ DIV BUSCAR POKEMON **************************-->
-    <!-- <section id="divPokedex" class="pokedex">
-        <label for="pokemonName">Escribe el nombre del pokemon</label>
-        <input type="text" name="pokemonName" id="namePokemon">
-          <button type="submit" class="btn" id="searchBtn">Buscar</button>
-          <button type="button" class="btn" id="clearBtn">Limiar Campos</button>
-            <div id="pokedexx"></div>
-              <img  id="imgPokemon">
-
-              <input id="btnCalcularPC" type="button" value="Calcular PC" />
-              <input id="txtPC" type="number" value="0"/>
-              <span id="txtResPC"></span>
-  </section> -->
-
-     <!-- <label for="search">Buscar</label>
-     <input type="text" placeholder="Encuetra un Pokemon" list="pokeList" id="search" data-list-filter="^">
-      <datalist id="pokeList">  </datalist>  -->
-       <!-- <select name="pokeList" id="pokeList">Selecciona</select>
-       <input type="button" id="forca" name="forc" value="Grabar Datos" class="boton"> -->
-
-
-    <!-- ************************ TERMINA DIV BUSCAR POKEMON ******************-->
-
 <!--******************************************CREAR LA POKEDEX ******************** -->
 <section id="divPokedex" class="containerPokedex">
-  <h2>Busca un Pokémon</h2>
+<h1 style="text-align:center">Busca un Pokémon</h1>
 <label for="namePokemon">Escribe el nombre del pokemon</label>
 <input type="text" id="namePokemon" class="inputDesign">
 <button type="submit" class="btn" id="searchBtn">Buscar</button>
-<!-- <button type="button" class="btn" id="clearBtn">Limiar Campos</button><br> -->
-<input id="btnCalcularPC" type="button" class="btn info" value="Calcular PC" />
 
+<input id="btnCalcularPC" type="button" class="btn info" value="Calcular PC" />
+<input id="txtPC" type="number" class="inputDesign" value="0"/>
+<div  class="txtResultPC"><span id="txtResPC"></span></div>
+<div >
+  <button type="button" class="btn clear" id="clearBtn">Limpiar Campos</button>
+</div>
 
 
 
 <!-- <button type="button" name="button">i</button> -->
-<input id="txtPC" type="number" class="inputDesign" value="0"/>
-<span id="txtResPC"></span>
+
  <div class="Pokedex">
        <div class='trapFlipped'>
            <div class='rectangle topborder'></div>
@@ -171,7 +152,7 @@
                <div class="greenlight_inner"></div>
        </div>
 
-       <div class="PokedexDisplay">
+       <div class="PokedexDisplay" id="caja">
            <img  id="imgPokemon" class="PokedexImg" alt="">
            <div id="pokedexx" class="PokedexList"></div>
       </div>
@@ -199,7 +180,7 @@
        </div>
        <div class="greenbutton"></div>
    </div>
-<button type="button" class="btn" id="clearBtn">Limiar Campos</button>
+
 </section>
     <div id="root"></div>
     <script src="./data/pokemon/pokemon.js"></script>

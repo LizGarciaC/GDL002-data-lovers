@@ -1,21 +1,21 @@
 /* ---------------------- para las imagenes -------------------------------- */
 @media only screen and (max-width:320px) {
- .logoImg, .containerPokedex, .Pokedex{
+ .logoImg,  .Pokedex{
     width: 80%;
-    height: 60%;
+    height: 80%;
   }
 }
 
 @media only screen and (max-width:768px) {
-  .logoImg, .containerPokedex, .Pokedex{
+  .logoImg, .Pokedex{
     width: 80%;
-    height: 60%;
+    height: 80%;
   }
 }
 @media only screen and (min-width: 1024px) {
   .logoImg, .border{
     width: 100%;
-    height: 80%;
+    height: 100%;
   }
 }
 body{
@@ -93,40 +93,16 @@ margin-bottom: 10%;
 
 /* --------------------------imagens del slide-----------------------------  */
 
+img {
+  vertical-align: middle;
+  width: 100%;
+}
 /* * Slideshow container */
 .slideshow-container {
   max-width: 800px;
-  position: relative;
-  max-height: 300px;
   margin: auto;
+
 }
-
-/* Next & previous buttons */
-/* .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-} */
-
-/* Position the "next button" to the right */
-/* .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-} */
-
-/* On hover, add a black background color with a little bit see-through */
-/* .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-} */
 
 /* Caption text */
 .text {
@@ -137,7 +113,6 @@ margin-bottom: 10%;
   font-family:'Bookman, URW Bookman L', serif;
   font-size: 1.5vw;
 }
-
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -172,6 +147,10 @@ margin-bottom: 10%;
   to {opacity: 1}
 }
 
+/* On smaller screens, decrease text size */
+/* @media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+} */
 
 /* ----------------- botones (ver más pokemon y buscar pokedex) --------------*/
 /* .containerBtn{
@@ -296,12 +275,7 @@ margin-right: auto;
     position: relative;
     bottom:20px;
 }
-/* .PokedexDisplay h3:first-of-type{
-    padding:3% 3% 0 0 ;
-    font-weight: lighter;
-    text-align: right;
-    bottom:0px;
-} */
+
 .PokedexDisplay img{
     bottom:5px;
     position: relative

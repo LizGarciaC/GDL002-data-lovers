@@ -1,4 +1,3 @@
-
 window.data= {
 
   getAllPokemon:()=>{
@@ -7,7 +6,7 @@ window.data= {
 
 
   filterData: (data,namePokemon) =>{
-    console.log(data,namePokemon);
+    // console.log(data,namePokemon);
     for(let i=0; i<data.length; i++){
       let pokemon = data[i];
       if(pokemon.name == namePokemon){
@@ -17,6 +16,7 @@ window.data= {
   },
 
   sortData:(sortBy, sortOrder) =>{
+    console.log(sortBy, sortOrder);
     let orderedPokemon;
     orderedPokemon=window.POKEMON.pokemon.sort((a,b)=>{
       if (a.name > b.name){
@@ -45,7 +45,6 @@ window.data= {
    });
    return res;
  }
-
 
 
 };

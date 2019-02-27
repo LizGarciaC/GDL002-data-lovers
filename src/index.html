@@ -55,45 +55,47 @@
   </div>
 </article>
 
- <section  id="divPantallaPrincipal" class="pantallaPrincipal">
+<section  id="divPantallaPrincipal" class="pantallaPrincipal">
 
-        <div class="slideshow-container" id="slidesContainer">
-          <div class="mySlides fade">
-            <img src="https://media.shoanime.com/2017/10/pokeport-750x450.jpg"  alt="">
-            <div class="text"><h3> SABIAS QUE.. </h3>
+       <div class="slideshow-container" id="slidesContainer">
+         <div class="mySlides fade">
+           <img src="https://media.shoanime.com/2017/10/pokeport-750x450.jpg" alt="">
+           <div class="text"><h3> SABIAS QUE.. </h3>
                <p><em>Origen de Pikachu</em>
                   La criatura más popular del juego es Pikachu, que es una combinación de la onomatopeya japonesa pikapika (chispa)
                 y el sonido de un chirrido, que se expresa como Chuchu.</p>
-            </div>
-         </div>
+           </div>
+        </div>
 
-        <div class="mySlides  fade">
-          <img src="https://vrzone.com/wp-content/uploads/2016/11/landscape-1456483171-pokemon2.jpg" alt="">
-          <div class="text"><h3> SABIAS QUE.. </h3>
+       <div class="mySlides  fade">
+         <img src="https://vrzone.com/wp-content/uploads/2016/11/landscape-1456483171-pokemon2.jpg" alt="">
+         <div class="text"><h3> SABIAS QUE.. </h3>
            <em>Naturaleza del juego</em>
             <p>Algunos pokémons evolucionan luego de que son intercambiados. Se piensa que estas evoluciones fueron causadas por miedo al abandono,
             y de que el pokémon está tratando de mejorar para que sus dueños lo quieran de nuevo.</p>
-          </div>
-        </div>
+         </div>
+       </div>
 
-        <div class="mySlides fade">
-          <img src="https://cdn3.cnet.com/img/dEN-zxk7Szx3xsJa1CW6JheRrTA=/936x527/2016/07/08/a47441e3-c3d0-485f-b5ae-c0e30cea33e0/foto14.jpg" alt="">
-          <div class="text"> <h3>SABIAS QUE..</h3>
+       <div class="mySlides fade">
+         <img src="https://cdn3.cnet.com/img/dEN-zxk7Szx3xsJa1CW6JheRrTA=/936x527/2016/07/08/a47441e3-c3d0-485f-b5ae-c0e30cea33e0/foto14.jpg" alt="">
+         <div class="text"><h3>SABIAS QUE..</h3>
            <em>Monedas de colección</em>
             <p>Una pequeña nación del Pacífico Sur llamada Niue emitió en 2001 una serie de monedas de dólar que contó con la imagen de varios pokémons:
             Pikachu, Meowth, Squirtle, Bulbasaur y Charmander.</p>
-          </div>
-        </div>
-      <br>
-          <div style="text-align:center" >
-              <span class="dot" onclick="currentSlide(1)"></span>
-              <span class="dot" onclick="currentSlide(2)"></span>
-              <span class="dot" onclick="currentSlide(3)"></span>
-              <!-- <span class="dot" id="currentSlide"></span> -->
-              <!-- <span class="dot" id="currentSlide"></span>
-              <span class="dot" id="currentSlide"></span> -->
-          </div>
-        </div>
+         </div>
+       </div>
+
+                 <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                 <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+      </div> <!-- termina class="slideshow-container" -->
+
+     <br>
+
+     <div style="text-align:center" id="dotNext" >
+       <span class="dot" value="1"   onclick="currentSlide(1)" ></span>
+       <span class="dot"  value="2"  onclick="currentSlide(2)"></span>
+       <span class="dot"  value="3"  onclick="currentSlide(3)"></span>
+     </div>
 </section>
     <!-- ************************ Termina DIV pantalla principal-****************************-->
 
@@ -122,17 +124,13 @@
   <button type="button" class="btn clear" id="clearBtn">Limpiar Campos</button>
 </div>
 
-
-
-<!-- <button type="button" name="button">i</button> -->
-
  <div class="Pokedex">
-       <div class='trapFlipped'>
-           <div class='rectangle topborder'></div>
+       <div class="trapFlipped">
+           <div class="rectangle topborder"></div>
        </div>
 
-       <div class='trapFlipped_inner'>
-           <div class='rectangle_inner topborder'></div>
+       <div class="trapFlipped_inner">
+           <div class="rectangle_inner topborder"></div>
        </div>
 
        <div class="MainLightBG">
@@ -153,7 +151,6 @@
        </div>
 
        <div class="PokedexDisplay" id="caja">
-           <img  id="imgPokemon" class="PokedexImg" alt="">
            <div id="pokedexx" class="PokedexList"></div>
       </div>
 
@@ -170,12 +167,12 @@
        <div class="longlight blue"></div>
 
        <div class="dpad">
-           <div class='vert'></div>
+           <div class="vert"></div>
            <div class="horz"></div>
        </div>
 
        <div class="dpad_copy">
-               <div class='vert'></div>
+               <div class="vert"></div>
                <div class="horz"></div>
        </div>
        <div class="greenbutton"></div>

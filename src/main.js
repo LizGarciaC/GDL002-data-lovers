@@ -28,25 +28,11 @@ let home=document.getElementById("home");
   location.reload(true);
 });
 
-document.getElementById("clearBtn").addEventListener("click", reset);
-
-function reset(){
-
-       document.getElementById("pokedexx").innerHTML="";
-       document.getElementById("txtResPC").innerHTML="";
-       // document.getElementById("imagPokedex").innerHTML="";
-  let  remove=document.getElementById("imgPokemon");
-  let clear="";
-       // remove.parentNode.removeChild(remove);
-       remove.parentNode.replaceChild(clear);
-}
 
 let showMorePokemon=document.getElementById("showMorePokemon");
 
    showMorePokemon.addEventListener('click', ()=> {
     pantallaPrincipal.style.display="none";
-    // pokedex.style.display="none";
-  //  ordenAlfabetico.style.display="none";
     listaPokemon.style.display="block";
 
       let pokemonList;
@@ -94,18 +80,20 @@ let searchPokemon=document.getElementById("searchPokemon");
   }
 
   function printFirstData(pokemon) {
-
-  let image = document.getElementById("imgPokemon");
   let pokedex = document.getElementById("pokedexx");
 
-  pokedex.innerHTML = ` <strong>Nombre:  </strong><span id='selectedPokemon'>${pokemon.name}</span> <br/> <strong>Número:  </strong>${pokemon.num}    <br/>
-                                <strong>Tipo:    </strong>${pokemon.type} <br/> <strong>Altura:  </strong>${pokemon.height} <br/>
-                                <strong>Peso:    </strong>${pokemon.weight} <br/> <strong>Debilidade(s):  </strong> ${pokemon.weaknesses}`;
-
-  image.setAttribute("src", "" + pokemon.img);
+  pokedex.innerHTML = ` <strong>Nombre:  </strong><span id='selectedPokemon'>${pokemon.name}</span><div><img src="${pokemon.img}"/></div>
+                        <strong>Número:  </strong>${pokemon.num} <br/> <strong>Tipo:    </strong>${pokemon.type} <br/> <strong>Altura:  </strong>${pokemon.height} <br/>
+                        <strong>Peso:    </strong>${pokemon.weight} <br/> <strong>Debilidade(s):  </strong> ${pokemon.weaknesses}`;
 }
 
 });
+
+clearBtn.addEventListener("click", ()=>{
+      document.getElementById("txtResPC").innerHTML="";
+      document.getElementById("pokedexx").innerHTML="";
+});
+
 // calculo de puntos de combate
   let btnCalcularPC = document.getElementById("btnCalcularPC");
   let txtPC = document.getElementById("txtPC");
@@ -123,7 +111,6 @@ let searchPokemon=document.getElementById("searchPokemon");
   // ORDENAR Alfabéticamente
   let orderAlpha=document.getElementById("btnOrderAlpha");
   orderAlpha.addEventListener("click", ()=>{
-    console.log("ENTRO");
     let pokemonList;
     pokemonList = data.sortData("name", true);
     let pokemonBox=document.getElementById("generalList");
@@ -136,41 +123,32 @@ let searchPokemon=document.getElementById("searchPokemon");
   });
 
 
-
-
-
-
-
     // -------------------------------- para las imagenes-----------------
 
-let slideIndex = 1;
-showSlides(slideIndex);
-// let dots=document.getElementByClassName("dot");
-// currentSlide(n);
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    // let currentSlide=0;
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-// let currentSlide=document.getElementById("currentSlide");
-// currentSlide.addEventListener("click" ()=> {
-//   for(let i=0; i<dot.length; i++)
-//   dots[i].className = dots[i].className.replace(" active", "");
-//   showSlides(slideIndex = dot[i]);
-// });
+    // currentSlide=n;
+    // slideIndex=n;
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  let currentSlide=0;
-  if (n > slides.length) {slideIndex = 1; }
-  if (n < 1) {slideIndex = slides.length;}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+
+    // function currentSlide(n) {
+    //     showSlides(slideIndex = n);
+    // }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1; }
+      if (n < 1) {slideIndex = slides.length;}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }

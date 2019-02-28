@@ -59,4 +59,6 @@ window.data= {
 // window.example=example;
 // window.dataLovers={
 //   showBulbasaurName
+
 // }
+

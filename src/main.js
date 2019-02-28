@@ -73,11 +73,13 @@ searchPokemon.addEventListener('click', () => {
       // pokemon=data.filterData(window.POKEMON.pokemon,document.getElementById("namePokemon").value);
       printFirstData(pokemon);
       document.getElementById("namePokemon").value = "";
+
     }
 
   }
 
   function printFirstData(pokemon) {
+
     let pokedex = document.getElementById("pokedexx");
 
     pokedex.innerHTML = ` <strong>Nombre:  </strong><span id='selectedPokemon'>${pokemon.name}</span><div><img src="${pokemon.img}"/></div>
@@ -155,3 +157,4 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+

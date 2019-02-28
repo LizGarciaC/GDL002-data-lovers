@@ -210,13 +210,16 @@ margin-right: auto;
   color: #424242;
   text-align: justify;
   display: none;
+
 }
 
 .pokemonImgs {
+  background-color:#9ACD32;
   display: inline-block;
   margin: 15px;
   padding: 5px;
   border: solid 1px blue
+
 }
 
 .pokemonImgs:hover{

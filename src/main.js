@@ -28,7 +28,7 @@ let home=document.getElementById("home");
   location.reload(true);
 });
 
-
+//  Muestra todos los pokemon
 let showMorePokemon=document.getElementById("showMorePokemon");
 
    showMorePokemon.addEventListener('click', ()=> {
@@ -48,6 +48,21 @@ let showMorePokemon=document.getElementById("showMorePokemon");
 
 });
 
+// ORDENAR Alfabéticamente
+let orderAlpha=document.getElementById("btnOrderAlpha");
+orderAlpha.addEventListener("click", ()=>{
+  // let pokemonList,
+  // let data=window.POKEMON.pokemon;
+  let pokemonList = data.sortData(window.POKEMON.pokemon);
+  // pokemonList = data.sortData("name",true);
+  let pokemonBox=document.getElementById("generalList");
+  let htmlBox="";
+  for (let contPokemon=0; contPokemon<pokemonList.length; contPokemon++){
+    htmlBox += `<section class="pokemonImgs"><span>${pokemonList[contPokemon].num} ${pokemonList[contPokemon].name}
+                <div><img src="${pokemonList[contPokemon].img}"/></div></span></section>`;
+  }
+  pokemonBox.innerHTML=htmlBox;
+});
 
 // Funcion para buscar el pokemon
 let searchPokemon=document.getElementById("searchPokemon");
@@ -71,6 +86,7 @@ let searchPokemon=document.getElementById("searchPokemon");
       namePokemon.value="";
       document.getElementById("namePokemon").focus();
     }else {
+
       pokemon=data.filterData(window.POKEMON.pokemon,namePokemon);
       // pokemon=data.filterData(window.POKEMON.pokemon,document.getElementById("namePokemon").value);
       printFirstData(pokemon);
@@ -103,24 +119,12 @@ clearBtn.addEventListener("click", ()=>{
    let pokemon;
    pokemon = document.getElementById("selectedPokemon").innerHTML;
    let powerCombat = txtPC.value;
-   let resPC = data.computeData(pokemon, powerCombat);
+   let resPC = data.computeData(window.POKEMON.pokemon,pokemon, powerCombat);
    txtResPC.innerHTML = resPC;
    txtPC.value="";
   });
 
-  // ORDENAR Alfabéticamente
-  let orderAlpha=document.getElementById("btnOrderAlpha");
-  orderAlpha.addEventListener("click", ()=>{
-    let pokemonList;
-    pokemonList = data.sortData("name", true);
-    let pokemonBox=document.getElementById("generalList");
-    let htmlBox="";
-    for (let contPokemon=0; contPokemon<pokemonList.length; contPokemon++){
-      htmlBox += `<section class="pokemonImgs"><span>${pokemonList[contPokemon].num} ${pokemonList[contPokemon].name}
-                  <div><img src="${pokemonList[contPokemon].img}"/></div></span></section>`;
-    }
-    pokemonBox.innerHTML=htmlBox;
-  });
+
 
 
     // -------------------------------- para las imagenes-----------------

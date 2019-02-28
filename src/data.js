@@ -15,10 +15,13 @@ window.data= {
     }
   },
 
-  sortData:(sortBy, sortOrder) =>{
-    console.log(sortBy, sortOrder);
+  sortData:(data) =>{
+    // sortData:(sortBy, sortOrder) =>{
+    //console.log(data, name);
+    // console.log(data, namePokemon);
     let orderedPokemon;
-    orderedPokemon=window.POKEMON.pokemon.sort((a,b)=>{
+    // orderedPokemon=window.POKEMON.pokemon.sort((a,b)=>{
+    orderedPokemon=data.sort((a,b)=>{
       if (a.name > b.name){
         return 1;
       }
@@ -30,9 +33,10 @@ window.data= {
     return orderedPokemon;
   },
 
-  computeData : (pokemonName, powerCombat) => {
+  computeData : (data,pokemonName, powerCombat) => {
    let res = 0;
-   window.POKEMON.pokemon.forEach(element => {
+   // window.POKEMON.pokemon.forEach(element => {
+     data.forEach(element => {
      if (element.name == pokemonName){
        if (element.multipliers != null){
          res = element.multipliers[0] * powerCombat;

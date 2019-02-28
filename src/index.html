@@ -1,97 +1,197 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>Pokémon for Dummies</title>
-    <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/188/188987.png">
-<link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <img src="pokemon4dummies.jpg" width="100%">
+<html lang="es" dir="ltr">
 
-    <div class="border">
-      <!-- <button type="button" name="button" id="btnAbout"> About </button> -->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Pokémon for Dummies</title>
+  <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/188/188987.png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="containerImgLogo">
+    <img src="pokemon4dummies.jpg" class="logoImg" alt="">
+  </div>
+  <br>
+
+  <!-- ************************ SECTION HOME  ************************************-->
+  <div class="borderMenuPrincipal">
+    <nav class="menuPrincipal">
+      <ul>
+        <li><a href="#Home" id="home">Home</a>
+          <ul>
+            <li><a href="#" id="showMorePokemon">Ver más Pokémon</a></li>
+            <li><a href="#" id="searchPokemon">Busca un pokémon</a></li>
+            <li><a href="#" id="showAbout">About</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- ************************ TERMINA SECTION HOME  ************************************-->
+  <br>
+  <!-- ************************ DIV IMAGENES  ************************************-->
+  <article id="aboutPokemon" class="aboutPokemon">
+    <div class="textAbout">
+      <h2>Pokemon for Dummies</h2>
+      <p>Es una página que te permite introducirte al fascinante mundo de Pokémon GO. <br>
+        Pokemon GO es un videojuego de aventura de realidad aumentada, para dispositivos
+        iOS y Android. Pokémon GO consiste en buscar, capturar, y luchar con los personajes
+        de la saga Pokémon. <br>
+        Asi que aquí podrás encontrar detalles sobre los 151 pokémon y cuáles son sus características
+        a travez de las diferentes secciones de la página.</p>
+      <h3>Acerca de las secciones:</h3>
+      <p><em>Ver más Pokémon.</em><br>
+        Aqui podrás ver la lista completa de los 151 Pokémon con su imagen y nombre.</p>
+      <p><em>Busca un Pókemon.</em>
+        En esta sección podrás realizar busquedas personalizadas de cualquiera de los
+        151 Pokémon, el resultado de la búsqueda te arrojará los detalles más
+        importantes del Pokémon buscado incluyendo su imágen.</p>
+      <p><em>Busca de PC.</em><br>
+        Los PC o CP, abreviaturas de <b>Poder de Combate</b> y <b>Combat Power</b>
+        , son una unidad de la fortaleza de un Pokémon.
+        Esta medida nos indica lo fuerte que es un Pokémon y es individual de cada
+        ejemplar. Por ejemplo, diferentes Pikachus que se capturen tendrán diferentes
+        medidas de PC. Es un indicativo de lo bien que se comportarán en un combate.</p>
     </div>
-    <br>
+  </article>
 
-    <!-- ************************ DIV IMAGENES Y BOTONES ************************************-->
+  <section id="divPantallaPrincipal" class="pantallaPrincipal">
 
-
-    <div  id="divPantallaPrincipal" class="pantallaPrincipal"> 
-      <div class="slideshow-container">
-        <div class="mySlides fade">
-          <!-- <div class="numberText"> 1/3</div> -->
-          <img src="https://static.turbosquid.com/Preview/2016/07/14__13_34_28/Pikachu_02.pngEBBC6643-21BC-4524-88D0-BAFDF17C6823Original.jpg" width="100%">
-          <div class="text">SABIAS QUE.. <br>
-            <p>Origen de Pikachu <br>
-                La criatura más popular del juego es Pikachu, que es una combinación de la onomatopeya japonesa pikapika (chispa) <br>
-                y el sonido de un chirrido, que se expresa como Chuchu.</p>
-          </div>
+    <div class="slideshow-container" id="slidesContainer">
+      <div class="mySlides fade">
+        <img src="https://media.shoanime.com/2017/10/pokeport-750x450.jpg" alt="">
+        <div class="text">
+          <h3> SABIAS QUE.. </h3>
+          <p><em>Origen de Pikachu</em>
+            La criatura más popular del juego es Pikachu, que es una combinación de la onomatopeya japonesa pikapika
+            (chispa)
+            y el sonido de un chirrido, que se expresa como Chuchu.</p>
         </div>
+      </div>
 
-        <div class="mySlides  fade">
-          <!-- <div class="numberText"> 2/3</div> -->
-          <img src="https://vrzone.com/wp-content/uploads/2016/11/landscape-1456483171-pokemon2.jpg" width="100%">
-          <div class="text">SABIAS QUE.. <br>
-          <p>Naturaleza del juego <br>
-            Algunos pokémons evolucionan luego de que son intercambiados. Se piensa que estas evoluciones fueron causadas por miedo al abandono,
+      <div class="mySlides  fade">
+        <img src="https://vrzone.com/wp-content/uploads/2016/11/landscape-1456483171-pokemon2.jpg" alt="">
+        <div class="text">
+          <h3> SABIAS QUE.. </h3>
+          <em>Naturaleza del juego</em>
+          <p>Algunos pokémons evolucionan luego de que son intercambiados. Se piensa que estas evoluciones fueron
+            causadas por miedo al abandono,
             y de que el pokémon está tratando de mejorar para que sus dueños lo quieran de nuevo.</p>
-          </div>
         </div>
+      </div>
 
-        <div class="mySlides fade">
-        <!-- <div class="numberText"> 3/3</div> -->
-          <img src="https://cdn3.cnet.com/img/dEN-zxk7Szx3xsJa1CW6JheRrTA=/936x527/2016/07/08/a47441e3-c3d0-485f-b5ae-c0e30cea33e0/foto14.jpg" width="100%">
-          <div class="text">SABIAS QUE.. <br>
-          <p> Monedas de colección <br>
-            Una pequeña nación del Pacífico Sur llamada Niue emitió en 2001 una serie de monedas de dólar que contó con la imagen de varios pokémons:
+      <div class="mySlides fade">
+        <img
+          src="https://cdn3.cnet.com/img/dEN-zxk7Szx3xsJa1CW6JheRrTA=/936x527/2016/07/08/a47441e3-c3d0-485f-b5ae-c0e30cea33e0/foto14.jpg"
+          alt="">
+        <div class="text">
+          <h3>SABIAS QUE..</h3>
+          <em>Monedas de colección</em>
+          <p>Una pequeña nación del Pacífico Sur llamada Niue emitió en 2001 una serie de monedas de dólar que contó con
+            la imagen de varios pokémons:
             Pikachu, Meowth, Squirtle, Bulbasaur y Charmander.</p>
-          </div>
         </div>
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
       <br>
-
       <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
+        
       </div>
-
-      <div class="btn">
-          <button type="button" name="button" id=showMorePokemon>Ver más Pokémon</button>
-          <button type="button" name="button" id=searchPokemon>Busca un pokémon en la PokéDex</button>
-      </div>
-    </div>  
-    <!-- ************************ Termina DIV pantalla principal-****************************-->
-
-    <!-- ************************ DIV LISTA DE TODOS LOS POKEMON-****************************-->
-    <div id="divListaPokemon" class="ListaPokemon">    
-      <div class="PokemonImgs">
-        <div id="generalList"></div>
-      </div>
-    </div>                
-    <!-- ************************ TERMINA DIV LISTA DE TODOS LOS POKEMON-********************-->
-
-    <!-- ************************ DIV BUSCAR POKEMON EN LA POKEDEX-**************************-->
-    <div id="divPokedex" class="pokedex"> 
-      <!-- <select name="pokeList" id="pokeList"></select> -->
-      <label for="pokemonName">Escribe el nombre del pokemon</label>
-      <input type="text" name="pokemonName" id="namePokemon">
-      <button type="submit" name="button" id="searchBtn">Buscar</button>
-      <div id="pokedexx"></div>
-      <img  id="info1">
-      </div>
-  
     </div>
-    <!-- ************************ TERMINA DIV BUSCAR POKEMON EN LA POKEDEX-******************-->
+  </section>
+  <!-- ************************ Termina DIV pantalla principal-****************************-->
 
-    <div id="root"></div>
-    <script src="./data/pokemon/pokemon.js"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+  <!-- ************************ DIV LISTA DE TODOS LOS POKEMON-****************************-->
+  <section id="divListaPokemon" class="listPokemon">
+    <h2>Lista de los 151 Pokémon</h2>
+    <div id="divOrdenAlfabetico">
+      <button type="button" class="btn" id="btnOrderAlpha">Ordenar Alfabéticamente</button>
+    </div>
+    <div id="generalList"> </div>
+  </section>
+  <!-- ************************ TERMINA DIV LISTA DE TODOS LOS POKEMON-********************-->
+
+
+  <!--******************************************CREAR LA POKEDEX ******************** -->
+  <section id="divPokedex" class="containerPokedex">
+    <h2>Busca un Pokémon</h2> <br/>
+    <label for="namePokemon"> <h1>Escribe el nombre de un pokemon </h1></label>
+    <button type="submit" class="btn" id="searchBtn">Buscar</button>
+    <input type="text" id="namePokemon" class="inputDesign"> <br/> <br/>
+   
+    <div class="cajaCalculo"> 
+      <input id="btnCalcularPC" type="button" class="btn" value="Calcular PC" />
+
+      <!-- <button type="button" name="button">i</button> -->
+  
+      <input id="txtPC" type="number" class="inputDesign" value="0" />
+      <span id="txtResPC"></span><br/><br/>
+      <button type="button" class="btn" id="clearBtn">Limpiar Campos</button>
+    </div>
+    <div class="Pokedex">
+      <div class="trapFlipped">
+        <div class="rectangle topborder"></div>
+      </div>
+
+      <div class="trapFlipped_inner">
+        <div class="rectangle_inner topborder"></div>
+      </div>
+
+      <div class="MainLightBG">
+        <div class="MainLight">
+          <div class="MainLightShine">
+            <div class="MainLightShiner"></div>
+          </div>
+        </div>
+      </div>
+      <div class="redlight">
+        <div class="redlight_inner"></div>
+      </div>
+      <div class="yellowlight">
+        <div class="yellowlight_inner"></div>
+      </div>
+      <div class="greenlight">
+        <div class="greenlight_inner"></div>
+      </div>
+
+      <div class="PokedexDisplay">
+      <div id="pokedexx" class="PokedexList"></div>
+      </div>
+
+      <div class="depthbarLeft"></div>
+
+      <div class="AnalogStick">
+        <div class="AnalogStick_inner"></div>
+      </div>
+
+      <div class="depthbarBottom"></div>
+      <div class="depthbarRight"></div>
+
+      <div class="longlight red"></div>
+      <div class="longlight blue"></div>
+
+      <div class="dpad">
+        <div class="vert"></div>
+        <div class="horz"></div>
+      </div>
+
+      <div class="dpad_copy">
+        <div class="vert"></div>
+        <div class="horz"></div>
+      </div>
+      <div class="greenbutton"></div>
+    </div>
+ 
+  </section>
+  
+  <div id="root"></div>
+  <script src="./data/pokemon/pokemon.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>

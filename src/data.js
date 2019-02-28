@@ -1,3 +1,4 @@
+
 window.data= {
 
   getAllPokemon:()=>{
@@ -6,7 +7,7 @@ window.data= {
 
 
   filterData: (data,namePokemon) =>{
-    // console.log(data,namePokemon);
+    console.log(data,namePokemon);
     for(let i=0; i<data.length; i++){
       let pokemon = data[i];
       if(pokemon.name == namePokemon){
@@ -16,12 +17,9 @@ window.data= {
   },
 
   sortData:(data) =>{
-    // sortData:(sortBy, sortOrder) =>{
-    //console.log(data, name);
-    // console.log(data, namePokemon);
+    console.log(sortBy,sortOrder);
     let orderedPokemon;
-    // orderedPokemon=window.POKEMON.pokemon.sort((a,b)=>{
-    orderedPokemon=data.sort((a,b)=>{
+    orderedPokemon=window.POKEMON.pokemon.sort((a,b)=>{
       if (a.name > b.name){
         return 1;
       }
@@ -33,14 +31,13 @@ window.data= {
     return orderedPokemon;
   },
 
-  computeData : (data,pokemonName, powerCombat) => {
+  computeData : (pokemonName, powerCombat) => {
    let res = 0;
-   // window.POKEMON.pokemon.forEach(element => {
-     data.forEach(element => {
+   window.POKEMON.pokemon.forEach(element => {
      if (element.name == pokemonName){
        if (element.multipliers != null){
          res = element.multipliers[0] * powerCombat;
-         res="El rango estimado de PC es: " + res;
+         res="El rango estimado de PC es:  " + res;
        }
        else{
          res="Este pokémon no cuenta con posibilidades extra para combate";
@@ -49,6 +46,7 @@ window.data= {
    });
    return res;
  }
+
 
 
 };
@@ -61,4 +59,6 @@ window.data= {
 // window.example=example;
 // window.dataLovers={
 //   showBulbasaurName
+
 // }
+

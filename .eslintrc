@@ -7,9 +7,10 @@
   },
   "extends": "eslint:recommended",
   "globals": {
-    "cipher": false,  # aqui poner nuestro objeto global
-    "dataLovers": false, # ejemplo
+
+    "cipher": false,
     "data": false,
+    
     
 
   },

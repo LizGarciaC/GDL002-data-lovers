@@ -7,10 +7,7 @@
 - [Generales](#Consideraciones-Generales)
 - [Descripción](#Resumen-del-proyecto)
 - [Proceso de Diseño](#Prototipo-de-Bajo/Alto-nivel)
-- [Necesidades de usuario](#Funcionalidad)
 - [Adaptabilidad](#Responsive-Design)
-- [Pruebas de Usabilidad](#User-Test)
-
 
 ---
 ## Consideraciones generales
@@ -85,50 +82,16 @@ Tomando en cuenta los detalles ya mencionados, y despúes de algunos cambios, co
 
 ![Img1](src//Screenshot_20190228-101038_2.jpg)
 
+## Adaptabilidad - Responsive Design
 
+Utilizamos el diseño web responsive o adaptativo para que el usuario pueda obtener una visualización de esta misma página en distintos dispositivos. Desde laptop a tablets y móviles.
+Tratamos de redimensionar y colocar los elementos (botones, imágenes, etc.) de la web de forma que se adapten al ancho de cada dispositivo permitiendo una correcta visualización y una mejor experiencia para nuestro usuario.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-#### Testeos de usabilidad
-
-Durante el reto deberás realizar tests de usabilidad con distintos usuarios, y
-en base a los resultados de esos tests, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los tests y cómo los
-mejoraste en tu propuesta final.
-
-### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
-
-Luego de diseñar tu interfaz de usuario deberás trabajar en su implementación.
-Como mencionamos, **no** es necesario que construyas la interfaz tal como la
-diseñaste. Tendrás un tiempo limitado para hackear, así es que deberás
-priorizar.
-
-Como mínimo, tu implementación debe:
-
-1. Mostrar la data en una interfaz: puede ser un card, una tabla, una lista, etc.
-2. Permitir al usuario filtrar y ordenar la data.
-3. Calcular estadísticas de la colección (o subcolección) como media aritmética,
-   máximo y/o mínimo de algún atributo numérico, o contar cuántas veces aparece
-   un determinado valor, por ejemplo.
-4. Visualizarse sin problemas desde distintos tamaños de pantallas: móviles,
-   tablets y desktops.
-
-Es importante que tu interfaz, a pesar de ser una versión mínima de tu ideal,
-siga los fundamentos de _visual design_.
-
-#
-
+![Img1](src//Slide1.jpg)
+![Img1](src//Slide2.jpg)
+![Img1](src//Slide3.jpg)
+![Img1](src//Slide4.jpg)
+![Img1](src//Slide5.jpg)
 
 
 

@@ -64,16 +64,15 @@ searchPokemon.addEventListener('click', () => {
 
       namePokemon = document.getElementById("namePokemon").value;
     namePokemon = namePokemon.charAt(0).toUpperCase() + namePokemon.slice(1);
-    if (namePokemon == "") {
+    if (namePokemon == "" ) {
       alert("Escriba el nombre de un pokemon. Ej. Pikachu");
       namePokemon.value = "";
       document.getElementById("namePokemon").focus();
-    } else {
+     }
+    else{
       pokemon = data.filterData(window.POKEMON.pokemon, namePokemon);
-      // pokemon=data.filterData(window.POKEMON.pokemon,document.getElementById("namePokemon").value);
       printFirstData(pokemon);
       document.getElementById("namePokemon").value = "";
-
     }
 
   }
@@ -106,7 +105,7 @@ btnCalcularPC.addEventListener("click", () => {
   let pokemon;
   pokemon = document.getElementById("selectedPokemon").innerHTML;
   let powerCombat = txtPC.value;
-  let resPC = data.computeData(pokemon, powerCombat);
+  let resPC = data.computeData(window.POKEMON.pokemon,pokemon, powerCombat);
   txtResPC.innerHTML = resPC;
   txtPC.value = "";
 });
@@ -116,9 +115,7 @@ btnCalcularPC.addEventListener("click", () => {
 // ORDENAR Alfabéticamente
 let orderAlpha = document.getElementById("btnOrderAlpha");
 orderAlpha.addEventListener("click", () => {
-  console.log("ENTRO");
-  let pokemonList;
-  pokemonList = data.sortData("name", true);
+  let pokemonList = data.sortData(window.POKEMON.pokemon);
   let pokemonBox = document.getElementById("generalList");
   let htmlBox = "";
   for (let contPokemon = 0; contPokemon < pokemonList.length; contPokemon++) {
@@ -136,16 +133,16 @@ showSlides(slideIndex);
 // let dots=document.getElementByClassName("dot");
 // currentSlide(n);
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
 
 
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-  let currentSlide = 0;
+  // let currentSlide = 0;
   if (n > slides.length) { slideIndex = 1; }
   if (n < 1) { slideIndex = slides.length; }
   for (i = 0; i < slides.length; i++) {
@@ -157,4 +154,3 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
-

@@ -1,21 +1,54 @@
 /* ---------------------- para las imagenes -------------------------------- */
 @media only screen and (max-width:320px) {
-  .logoImg, .containerPokedex, .Pokedex{
+  .logoImg, .containerPokedex, .Pokedex,
+  {
      width: 80%;
      height: 60%;
    }
+   .footer{
+       max-height: 10%;
+     }
+    .aboutPokemon .textAbout{
+      max-width: 300px;
+      max-height: 380px;
+      font-size: 2.8vw;
+      /* margin-bottom: 20%; */
+    }
+    .divOrdenAlfabetico .btn{
+      max-width: 50%;
+      max-height: 30px;
+      font-size: 5vw;
+    }
+
  }
- 
+
  @media only screen and (max-width:768px) {
-   .logoImg, .containerPokedex, .Pokedex{
+    .containerPokedex, .Pokedex, .footer,{
+     max-height: 10%;
+     } .logoImg{
+       max-width: 100%;
+       max-height: 80px;
+       } {
      width: 80%;
      height: 60%;
+   }
+   .aboutPokemon .textAbout{
+     max-width: 200%;
+     max-height: 200%;
+     font-size: 2.5vw;
+     /* margin-bottom: 20%; */
    }
  }
  @media only screen and (min-width: 1024px) {
-   .logoImg, .border{
+   .logoImg, .border {
      width: 100%;
      height: 80%;
+   }
+   .aboutPokemon .textAbout{
+     max-width: 200%;
+     max-height: 200%;
+     font-size: 2.5vw;
+     /* margin-bottom: 20%; */
    }
  }
  body{
@@ -25,19 +58,20 @@
    background-attachment:fixed;
    margin: 0;
      /* background: url("http://media-s3-us-east-1.ceros.com/hype-beast/images/2018/07/13/a9a51bc0b8d626db493ab5f9a971b043/background-hero.png"); */
- 
+
  }
- 
+
  /* -------------------- Contenedor de about--------- */
  .aboutPokemon{
- width: 50%;
- height: 50%;
+ width: 80%;
+ height: 80%;
  text-align: justify;
- margin-left: 20%;
+ margin-left: 10%;
  margin-bottom: 10%;
- 
+
+
  }
- 
+
  .textAbout{
    text-align: justify;
    background-color: #FFFF00;
@@ -51,15 +85,15 @@
    display: flex;
    justify-content: center;
     }
- 
+
  /* ----------------------------nav (home) -------------------------------- */
     .borderMenuPrincipal{
-      background:dodgerblue;   
+      background:dodgerblue;
       text-align:center;
       border-width: 100%;
       height: 100%;
     }
- 
+
     .menuPrincipal ul{
       display: flex;
       padding: 0;
@@ -69,7 +103,7 @@
       height: auto;
       justify-content: center;
     }
- 
+
     .menuPrincipal  a{
       display: block;
       background-color:dodgerblue;
@@ -80,27 +114,27 @@
       font-family:Garamond;
       font-size: 4vw;
     }
- 
+
     .menuPrincipal a:hover{
       background-color: #FFD700;
     }
- 
+
     .menuPrincipal ul li ul {
       display: none;
     }
- 
+
     .menuPrincipal ul li a:hover + ul, .menuPrincipal ul li ul:hover{
       display: block;
     }
- 
+
  /* --------------------------imagens del slide-----------------------------  */
- 
+
  /* * Slideshow container */
  .slideshow-container {
    max-width: 800px;
    margin: auto;
  }
- 
+
  img{
    vertical-align: middle;
    width: 100%;
@@ -114,7 +148,7 @@
    font-family:'Bookman, URW Bookman L', serif;
    font-size: 1.5vw;
  }
- 
+
  /* The dots/bullets/indicators */
  .dot {
    cursor: pointer;
@@ -126,11 +160,11 @@
    display: inline-block;
    transition: background-color 0.6s ease;
  }
- 
+
  .active, .dot:hover {
    background-color: #717171;
  }
- 
+
  /* Fading animation */
  .fade {
    -webkit-animation-name: fade;
@@ -138,27 +172,23 @@
    animation-name: fade;
    animation-duration: 1.5s;
  }
- 
+
  @-webkit-keyframes fade {
    from {opacity: .4}
    to {opacity: 1}
  }
- 
+
  @keyframes fade {
    from {opacity: .4}
    to {opacity: 1}
  }
- 
- 
+
+
  /* ----------------- botones (ver más pokemon y buscar pokedex) --------------*/
- /* .containerBtn{
-   flex-direction: column;
-   max-width: 20%;
-   max-height: 10%;
-   float:left;
-   align-content: space-between;
- } */
- 
+.divOrdenAlfabetico .btn{
+  width: 50%;
+}
+
  .btn{
    background-color:DARKRED;
    border: none;
@@ -168,19 +198,16 @@
    cursor: pointer;
    border-radius: 8px;
    font-family:Garamond;
-   font-size: 1.5vw;
-   /* align-content: space-between; */
- 
-   /* box-shadow: 0 9px #4169E1; */
+    font-size: 3vw;
  }
- 
+
  .btn:hover {
    background-color: #00BFFF;
  }
- 
- .info{
+
+ /* .info{
    margin-left: 20%;
- }
+ } */
  /* --------------------------- Listado de pokemons --------------------------- */
  .inputDesign{
    width: 200px;
@@ -188,41 +215,34 @@
    padding: 5px 0 0 0;
    margin: 0 auto;
  }
- 
- 
+
+
  .listPokemon{
    width: 50%;
    font-family: Garamond;
-   font-size: 18px;
+   font-size: 16px;
    margin-left: 20%;
    border: 5px solid #fff;
    color: #424242;
    text-align: justify;
    display: none;
  }
- 
+
  .pokemonImgs {
    display: inline-block;
    background-color:GOLD;
-  
-
    color: black;
    margin: 15px;
    padding: 5px;
    border: solid 1px blue
  }
- 
+
  .pokemonImgs:hover{
    background-color:CRIMSON;
  }
- /* .pokemonImgs img{
-   height: 135px;
- } */
+
  /* -------------------------------------POKEDEX ------------------------- */
- /* *{
-     padding:0;
-     margin:0;
- } */
+
  .containerPokedex{
    display: flex;
    margin: auto;
@@ -244,7 +264,7 @@
      min-height: 400px;
      min-width: 200px;
      background-color: #ee0007;
- 
+
  }
  .PokedexDisplay{
      width: 88%;
@@ -260,19 +280,14 @@
      text-align: center;
      font-size:calc(8px + .5vw);
  }
- 
+
  .PokedexList{
      text-align: left;
      margin-left:20%;
      position: relative;
      bottom:20px;
  }
- /* .PokedexDisplay h3:first-of-type{
-     padding:3% 3% 0 0 ;
-     font-weight: lighter;
-     text-align: right;
-     bottom:0px;
- } */
+
  .PokedexDisplay img{
      bottom:5px;
      position: relative
@@ -524,7 +539,7 @@
      bottom:200px;
      left:65%;
  }
- 
+
  .vert{
      border: 1px solid black;
      position: relative;
@@ -583,5 +598,14 @@
 
  .cajaCalculo {
    text-align: left;
-   
+ }
+
+ .footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: dodgerblue;
+  color: white;
+  text-align: center;
  }

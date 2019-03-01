@@ -16,9 +16,15 @@ describe("filterData", ()=>{
   });
 
   it("Filter by name", () => {
-
   expect(data.filterData(pokemon,'Charmander')).toBe(pokemon[3]);
   });
+
+
+  it("Filter by name", () => {
+  expect(data.filterData(pokemon,'hjhk')).toBe("error");
+  });
+
+
 
 });
 
@@ -29,7 +35,7 @@ describe ("sortData", ()=>{
   });
 
   it("Sort alphabetically by name", ()=>{
-   expect(data.sortData(pokemon, "name")).toBe(pokemon);
+   expect(data.sortData(pokemon.pokemon) instanceof Array).toBe(true);
  });
 
 });
@@ -40,9 +46,11 @@ describe("computeData",()=>{
    expect(typeof data.computeData).toBe("function");
  });
 
-  it("Show a PowerCombat of Charmander ", () => {
+
+ it("Show a PowerCombat of Charmander ", () => {
   expect(data.computeData(pokemon.pokemon,'Charmander', 250)).toBe(412.5);
- // });
+ });
+
 
 });
 

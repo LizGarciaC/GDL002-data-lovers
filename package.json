@@ -7,7 +7,7 @@
     "htmlhint": "htmlhint src/*.html test/*.html",
     "eslint": "eslint --ext .js src/ test/",
     "pretest": "npm run eslint --silent && npm run htmlhint",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "dependencies": {
     "awesomplete": "^1.1.4",

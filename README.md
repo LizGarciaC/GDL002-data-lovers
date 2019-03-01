@@ -34,7 +34,7 @@ Es una página que permite al usuario introducirse al mundo de *Pokémon GO*, of
 
 Para lograr el objetivo de la aplicación, se consideraron las solicitudes de los usuarios principiante ó de poca experiencia.
 
-**Prototipo Inicial:**
+### Prototipo Inicial:
 
  ![Img1](src//PROTOTIPOBAJONIVEL.jpg)
 
@@ -54,7 +54,7 @@ En este diseño se muestran las primeras primeras propuestas para las pantallas,
   Esta medida nos indica lo fuerte que es un Pokémon y es individual de cada ejemplar. Por ejemplo, diferentes Pikachus que se capturen tendrán diferentes medidas de PC. Es un indicativo de lo bien que se comportarán en un combate.
 
 
-**Prototipo de alto nivel:**
+### Prototipo de alto nivel:
 
 Tomando en cuenta los detalles ya mencionados, y despúes de algunos cambios, como el de agregar una pantalla principal, se creo el prototipo en FIGMA, quedando como se muestra a continuación.
 
@@ -72,7 +72,10 @@ Tomando en cuenta los detalles ya mencionados, y despúes de algunos cambios, co
 
 **3.- Buscar un Pokémon**
 
--Con la opción de Ingresar el PC de manera individual
+-Con la opción de 
+  
+  * Ingresar el PC de manera individual
+  * Limpiar los campos de interacción.
 
 ![Img1](src//Screenshot_20190228-101032_2.jpg)
 
@@ -159,3 +162,10 @@ siga los fundamentos de _visual design_.
 - [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
 - [ ] UI: Permite filtrar data en base a una condición.
 
+
+
+
+
+
+
+### Ningún Pokémon fue lastimado durante el desarrollo de esta aplicación :)

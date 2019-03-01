@@ -46,9 +46,11 @@ describe("computeData",()=>{
    expect(typeof data.computeData).toBe("function");
  });
 
+
  it("Show a PowerCombat of Charmander ", () => {
   expect(data.computeData(pokemon.pokemon,'Charmander', 250)).toBe(412.5);
  });
+
 
 });
 
@@ -87,3 +89,5 @@ describe("computeData",()=>{
 // const showBulbasaurName=(POKEMON)=>{
 //   return POKEMON.pokemon[0].name;
 // };
+
+

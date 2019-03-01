@@ -35,7 +35,11 @@ window.data= {
      if (element.name == pokemonName){
        if (element.multipliers != null){
          res = element.multipliers[0] * powerCombat;
+
        }
+       //else{
+         //res="Este pokémon no cuenta con posibilidades extra para combate";
+       //}
      }
    });
    return res;

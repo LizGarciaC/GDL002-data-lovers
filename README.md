@@ -1,6 +1,8 @@
-# Data Lovers
+# Data Lovers - Pokémon for Dummies
 
-## Índice Proyecto Pokémon for Dummies
+[Open Pokémon for Dummies](https://lizgarciac.github.io/GDL002-data-lovers/src/)
+
+## Índice Proyecto 
 
 - [Generales](#Consideraciones-Generales)
 - [Descripción](#Resumen-del-proyecto)
@@ -8,9 +10,7 @@
 - [Necesidades de usuario](#Funcionalidad)
 - [Adaptabilidad](#Responsive-Design)
 - [Pruebas de Usabilidad](#User-Test)
-- [](#)
-- [](#)
-- [](#)
+
 
 ---
 ## Consideraciones generales
@@ -22,37 +22,68 @@
 
 ## Resumen del Proyecto
 
-Es una página que permite al usuario introducirse al fascinante mundo de Pokémon GO, ofreciendo ayuda visual para conocer a todos los pokémos con sus características básicas; así como de manera individual y con un extra para calcular hasta donde puede extender su fortaleza,un pokémon de manera individual.
-Pokemon GO es un videojuego de aventura de realidad aumentada, para dispositivos iOS y Android. Pokémon GO consiste en buscar, capturar, y luchar con los personajes de la saga Pokémon. 
+![rúbrica](src//pokemon4dummies.jpg)
+
+Es una página que permite al usuario introducirse al mundo de *Pokémon GO*, ofreciendo ayuda visual para conocer a todos los pokémos con sus características básicas; así como de manera individual y con un extra para calcular hasta donde puede extender su fortaleza, un pokémon de manera individual.
+
+  - Pokemon GO es un videojuego de aventura de realidad aumentada, para dispositivos iOS y Android. Consiste en buscar, capturar, y luchar con los personajes de la saga Pokémon. 
 
 
 
+## Prototipo de Bajo/Alto Nivel
 
-![rúbrica](https://i.pinimg.com/originals/cd/b4/96/cdb496ed6c7691e2323641315fcf1050.jpg)
-![rubrica-ii](src//Screenshot_20190228-101002_2.jpg)
+Para lograr el objetivo de la aplicación, se consideraron las solicitudes de los usuarios principiante ó de poca experiencia.
 
+### Prototipo Inicial:
 
+ ![Img1](src//PROTOTIPOBAJONIVEL.jpg)
 
+En este diseño se muestran las primeras primeras propuestas para las pantallas, donde se muestran las acciones:
 
-
-#Prototipo-de-Bajo/Alto-nivel
-
-Para lograr el objetivo de informar al usuario, se consideraron las siguientes acciones en el diseño.
-
-Acerca de los 151 pokémon de la región Kanto, se dividió e las siguientes secciones. 
 1.- Ver más Pokémon.
 
-        Aqui podrás ver la lista completa de los 151 Pokémon con su imagen y nombre.</p>
-      <p><em>Busca un Pókemon.</em>
-        En esta sección podrás realizar busquedas personalizadas de cualquiera de los
-        151 Pokémon, el resultado de la búsqueda te arrojará los detalles más
-        importantes del Pokémon buscado incluyendo su imágen.</p>
-      <p><em>Busca de PC.</em><br>
-        Los PC o CP, abreviaturas de <b>Poder de Combate</b> y <b>Combat Power</b>
-        , son una unidad de la fortaleza de un Pokémon.
-        Esta medida nos indica lo fuerte que es un Pokémon y es individual de cada
-        ejemplar. Por ejemplo, diferentes Pikachus que se capturen tendrán diferentes
-        medidas de PC. Es un indicativo de lo bien que se comportarán en un combate.</p>
+   Aqui podrás ver la lista completa de los 151 Pokémon con su imagen y nombre.
+      
+2.- Busca un Pókemon.
+
+  En esta sección podrás realizar busquedas personalizadas de cualquiera de los 151 Pokémon, el resultado de la búsqueda te arrojará los detalles más importantes del Pokémon buscado incluyendo su imágen.
+
+  3.- Calcula el PC.
+
+  Los PC o CP, abreviaturas de Poder de Combate y Combat Power, son una unidad de la fortaleza de un Pokémon.
+  Esta medida nos indica lo fuerte que es un Pokémon y es individual de cada ejemplar. Por ejemplo, diferentes Pikachus que se capturen tendrán diferentes medidas de PC. Es un indicativo de lo bien que se comportarán en un combate.
+
+
+### Prototipo de alto nivel:
+
+Tomando en cuenta los detalles ya mencionados, y despúes de algunos cambios, como el de agregar una pantalla principal, se creo el prototipo en FIGMA, quedando como se muestra a continuación.
+
+**1.- Pantalla Inicial**
+
+![Img1](src//Screenshot_20190228-101002_2.jpg)
+
+
+**2.- Ver todos los Pokémon**
+
+-Con la opción "Ordenar Alfabéticamente"
+
+![Img1](src//Screenshot_20190228-101023_2.jpg)
+
+
+**3.- Buscar un Pokémon**
+
+-Con la opción de 
+  
+  * Ingresar el PC de manera individual
+  * Limpiar los campos de interacción.
+
+![Img1](src//Screenshot_20190228-101032_2.jpg)
+
+**4.- About**
+
+-Acerca de las funciones y ventajas de la aplicación
+
+![Img1](src//Screenshot_20190228-101038_2.jpg)
 
 
 
@@ -62,70 +93,12 @@ Acerca de los 151 pokémon de la región Kanto, se dividió e las siguientes sec
 
 
 
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
 
-Dicho en palabras sencillas, aprenderás a:
 
-- Aplicar y profundizar todo lo que aprendiste en el proyecto anterior.
-- Pensar en las **necesidades de los usuarios** para crear historias de usuario.
-- Escribir y trabajar con **historias de usuario**, sus definiciones de
-  terminado (_definition of done_) en la organización y planificación de tu
-  trabajo.
-- Definir qué data y de qué forma mostrarla en el producto, basándote en
-  tu **entendimiento del usuario**.
-- Crear productos que sigan los **principios básicos de diseño visual** y
-  las **heurísticas de usabilidad**.
-- Iterar el diseño del producto, basándote en los resultados de los
-  **tests de usabilidad**.
-- Manipular **_arreglos_ (_arrays_) y _objetos_ (_objects_)**.
-- **Manipular el DOM** (agregar elementos dinámicamente basados en la data).
-- **Manejar eventos del DOM** para permitir interacción con el usuario
-  (filtrado, ordenado, ...).
-- Entender los beneficios y complejidades de **trabajar en equipo** en un
-  ambiente de incertidumbre.
 
-## Parte Obligatoria
 
-Los criterios para considerar que has completado este proyecto son:
 
-### Definición del producto
 
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
-
-### Historias de usuario
-
-Una vez que entiendas las necesidades de tu usuario, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Asegúrate de incluir una definición
-de terminado (_definition of done_) para cada una.
-
-### Diseño de la Interfaz de Usuario
-
-#### Prototipo de baja fidelidad
-
-Durante tu trabajo deberás haber hecho e iterado sketches (boceto) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que realices y las subas a tu repositorio, y las menciones en tu
-`README.md`.
-
-#### Prototipo de alta fidelidad
-
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc.
-
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para hackear. Además, tu
-diseño debe seguir los fundamentos de _visual design_. También, te recomendamos exportar
-tu diseño a [Zeplin](https://zeplin.io/) y podrías utilizar las especificaciones de
-estilo que te proporcione Zeplin al momento de implementar tus diseños en código.
 
 #### Testeos de usabilidad
 
@@ -154,274 +127,10 @@ Como mínimo, tu implementación debe:
 Es importante que tu interfaz, a pesar de ser una versión mínima de tu ideal,
 siga los fundamentos de _visual design_.
 
-### Pruebas unitarias
+#
 
-El _boilerplate_ de este proyecto no incluye pruebas unitarias, pero esperamos
-que escribas tus propias pruebas unitarias para las funciones encargadas de
-_procesar_, _filtrar_ y _ordenar_ la data, así como _calcular_ estadísticas.
-Para ello te recomendamos implementar las siguientes funciones en el archivo
-`src/data.js`:
 
-- `filterData(data, condition)`: esta función `filter` o filtrar recibiría la
-  data, y nos retornaría aquellos datos que sí cumplan con la condición.
 
-- `sortData(data, sortBy, sortOrder)`: esta función `sort` u ordenar
-  recibe tres parámetros.
-  El primer parámetro, `data`, nos entrega los datos.
-  El segundo parámetro, `sortBy`, nos dice con respecto a cuál de los campos de
-  la data se quiere ordenar.
-  El tercer parámetro, `sortOrder`, indica si se quiere ordenar de manera
-  ascendente o descendente.
-
-- `computeStats(data)`: la función `compute` o calcular, nos permitirá hacer
-  cálculos estadísticos básicos para ser mostrados de acuerdo a la data
-  proporcionada.
-
-Estas son propuestas de funciones que podrías implementar.
-
-El archivo `src/data.js` debe tener una cobertura del 70% de _statements_
-(_sentencias_), _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
-(_ramas_).
-
-**Estas funciones deben ser [_puras_](https://medium.com/laboratoria-developers/introducci%C3%B3n-a-la-programaci%C3%B3n-funcional-en-javascript-parte-2-funciones-puras-b99e08c2895d)
-e independientes del DOM**. Estas funciones serán después usadas desde el archivo
-`src/main.js`, al cargar la página, y cada vez que el usuario interactúe (click,
-filtrado, ordenado, ...).
-
-## Parte Opcional (Hacker edition)
-
-Features/características extra sugeridas:
-
-- En lugar de consumir la data estática brindada en este repositorio, puedes
-  consumir la data de forma dinámica, cargando un archivo JSON por medio de
-  `fetch`. La carpeta `src/data` contiene una versión `.js` y una `.json`
-  de cada set datos.
-- Agregarle a tu interfaz de usuario implementada visualizaciones gráficas. Para
-  ello te recomendamos explorar librerías de gráficas como [Chart.js](https://www.chartjs.org/)
-  o [Google Charts](https://developers.google.com/chart/).
-- 100% Coverage
-
-## Consideraciones técnicas
-
-La lógica del proyecto debe estar implementada completamente en JavaScript
-(ES6), HTML y CSS. En este proyecto NO está permitido usar librerías o
-frameworks, solo [vanilla JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e),
-con la excepción de librerías para hacer gráficas (charts); ver
-[_Parte opcional_](#parte-opcional-hacker-edition) más arriba.
-
-No se debe utilizar la _pseudo-variable_ `this`.
-
-El _boilerplate_ contiene una estructura de archivos como punto de partida así
-como toda la configuración de dependencias:
-
-```text
-.
-├── package.json
-├── README.md
-├── src
-│   ├── data
-│   │   ├── injuries
-│   │   │   ├── injuries.js
-│   │   │   └── injuries.json
-│   │   ├── lol
-│   │   │   ├── lol.js
-│   │   │   └── lol.json
-│   │   ├── pokemon
-│   │   │   ├── pokemon.js
-│   │   │   └── pokemon.json
-│   │   ├── steam
-│   │   │   ├── steam.js
-│   │   │   └── steam.json
-│   │   └── worldbank
-│   │       ├── worldbank.js
-│   │       └── worldbank.json
-│   ├── data.js
-│   ├── index.html
-│   ├── main.js
-│   └── style.css
-└── test
-    └── data.spec.js
-
-8 directories, 17 files
-```
-
-### `src/index.html`
-
-Al igual que en el proyecto anterior, existe un archivo `index.html`. Como ya
-sabrás, acá va la página que se mostrará al usuario. También nos sirve para
-indicar qué scripts se usarán y unir todo lo que hemos hecho.
-
-En este archivo encontrarás una serie de _etiquetas_ (_tags_) `<script>`
-_comentadas_. Para _cargar_ las diferentes fuentes de datos tendrás que
-_descomentar_ estas _etiquetas_. Cada uno de estos scripts asignará una variable
-global con la data correspondiente a esa fuente de datos.
-
-Por ejemplo, si descomentamos la siguiente línea:
-
-```html
-<!-- <script src="./data/worldbank/worldbank.js"></script> -->
-```
-
-La línea quedaría así:
-
-```html
-<script src="./data/worldbank/worldbank.js"></script>
-```
-
-Y ahora tendríamos la variable global `WORLDBANK` disponible en nuestros otros
-scripts (como `src/data.js` o `src/main.js`).
-
-### `src/main.js`
-
-Recomendamos usar `src/main.js` para todo tu código que tenga que ver con
-mostrar los datos en la pantalla. Con esto nos referimos básicamente a la
-interacción con el DOM. Operaciones como creación de nodos, registro de
-manejadores de eventos (_event listeners_ o _event handlers_), ....
-
-Esta no es la única forma de dividir tu código, puedes usar más archivos y
-carpetas, siempre y cuando la estructura sea clara para tus compañeras.
-
-### `src/data.js`
-
-El corazón de este proyecto es la manipulación de datos a través de arreglos y
-objetos. La idea de este archivo es contener toda la funcionalidad
-que corresponda a obtener, procesar y manipular datos.
-
-En este archivo esperamos que implementes las funciones detalladas en la sección
-de [_Pruebas Unitarias_](#pruebas-unitarias).
-
-### `src/data`
-
-En esta carpeta están los datos de las diferentes fuentes. Encontrarás una
-carpeta por cada fuente, y dentro de cada carpeta dos archivos: uno con la
-extensión `.js` y otro `.json`. Ambos archivos contienen la misma data; la
-diferencia es que el `.js` lo usaremos a través de una etiqueta `<script>`,
-mientras que el `.json` está ahí para opcionalmente cargar la data de forma
-asíncrona con [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
-(ver sección de [_Parte Opcional_](#parte-opcional-hacker-edition)).
-
-### `test/data.spec.js`
-
-Tendrás también que completar las pruebas unitarias de las funciones
-implementadas en el archivo `data.js`.
-
-## Evaluación
-
-Recuerda revisar la [rúbrica](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vRktPN4ilZtkRN5tUb3DVhgeihwlzk63_-JI3moA-bXpKDbHDioAK2H3qbrwWNb0Ql4wX22Tgv7-PDv/pubhtml)
-para ver la descripción detallada de cada habilidad y cada nivel. Esta es una
-lista de todas las habilidades involucradas en este proyecto y que evaluaremos
-cuando lo completes:
-
-### General
-
-| Característica/Habilidad |
-| ------------------------ |
-| Completitud              |
-
-### Tech
-
-| Habilidad              |
-| ---------------------- |
-| **JavaScript**         |
-| Estilo                 |
-| Nomenclatura/semántica |
-| Funciones/modularidad  |
-| Estructuras de datos   |
-| Tests                  |
-| **HTML**               |
-| Validación             |
-| Estilo                 |
-| Semántica              |
-| **CSS**                |
-| DRY                    |
-| Responsive             |
-| **SCM**                |
-| Git                    |
-| GitHub                 |
-| **CS**                 |
-| Lógica                 |
-| Arquitectura           |
-
-### UX
-
-| Habilidad       |
-| --------------- |
-| User Centricity |
-| Entrevistas     |
-| Contraste       |
-| Alineación      |
-| Jerarquía       |
-| Tipografía      |
-| Color           |
-
-### Habilidades Blandas
-
-| Habilidad                    |
-| ---------------------------- |
-| Planificación y organización |
-| Autoaprendizaje              |
-| Solución de problemas        |
-| Dar y recibir feedback       |
-| Adaptabilidad                |
-| Trabajo en equipo            |
-| Comunicación eficaz          |
-| Presentaciones               |
-
----
-
-## Pistas sobre cómo empezar a trabajar en el proyecto
-
-Antes de empezar a escribir código, debes definir qué deberá hacer el producto
-en base al conocimiento que puedas obtener de tu usuario. Estas preguntas te
-pueden ayudar:
-
-- ¿Quiénes son los principales usuarios de producto?
-- ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
-- ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
-- ¿Cuándo utilizan o utilizarían el producto?
-
-Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
-
-1. Una de las integrantes del equipo debe realizar un :fork_and_knife:
-   [fork](https://help.github.com/articles/fork-a-repo/) del repo de tu cohort,
-   tus \_coaches\* te compartirán un \_link\* a un repo y te darán acceso de lectura
-   en ese repo. La otra integrante del equipo deber hacer un fork **del
-   repositorio de su compañera** y [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1)
-   un `remote` hacia el mismo.
-2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-   tu :fork_and_knife: [fork](https://help.github.com/articles/fork-a-repo/) a tu computadora (copia local).
-3. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
-   asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
-4. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
-   pruebas unitarias (unit tests) con el comando `npm test`.
-5. A codear se ha dicho! :rocket:
-
----
-
-## Contenido de referencia
-
-### Diseño de experiencia de usuario (User Experience Design)
-
-- Investigación con usuarios / entrevistas
-- Principios de diseño visual
-
-### Desarrollo Front-end
-
-- Unidad de testing en curso de JavaScript en LMS.
-- Unidad de arreglos en curso de JavaScript en LMS.
-- Unidad de objetos en curso de JavaScript en LMS.
-- Unidad de funciones en curso de JavaScript en LMS.
-- Unidad de DOM en curso de Browser JavaScript en LMS.
-- [Array en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array)
-- [Array.sort en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort)
-- [Array.map en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map)
-- [Array.filter en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter)
-- [Array.reduce en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce)
-- [Array.forEach en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
-- [Object.keys en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/keys)
-- [Object.entries en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/entries)
-- [Fetch API en MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-- [json.org](https://json.org/json-es.html)
 
 ### Herramientas
 
@@ -453,8 +162,10 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 - [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
 - [ ] UI: Permite filtrar data en base a una condición.
 
-## Checklist (Opcional)
 
-- [ ] Consume data de forma dinámica (`fetch()`).
-- [ ] Utiliza Librerías de graficas (`chart.js` ó `google chart`).
-- [ ] Cobertura de coverage al 100%.
+
+
+
+
+
+### Ningún Pokémon fue lastimado durante el desarrollo de esta aplicación :)

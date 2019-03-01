@@ -64,16 +64,15 @@ searchPokemon.addEventListener('click', () => {
 
       namePokemon = document.getElementById("namePokemon").value;
     namePokemon = namePokemon.charAt(0).toUpperCase() + namePokemon.slice(1);
-    if (namePokemon == "") {
+    if (namePokemon == "" ) {
       alert("Escriba el nombre de un pokemon. Ej. Pikachu");
       namePokemon.value = "";
       document.getElementById("namePokemon").focus();
-    } else {
+     }
+    else{
       pokemon = data.filterData(window.POKEMON.pokemon, namePokemon);
-      // pokemon=data.filterData(window.POKEMON.pokemon,document.getElementById("namePokemon").value);
       printFirstData(pokemon);
       document.getElementById("namePokemon").value = "";
-
     }
 
   }

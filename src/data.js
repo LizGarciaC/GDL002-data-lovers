@@ -5,18 +5,15 @@ window.data= {
     return window.POKEMON.pokemon;
   },
 
-
   filterData: (data,namePokemon) =>{
-    // console.log(data,namePokemon);
-    for(let i=0; i<data.length; i++){
-      let pokemon = data[i];
-      if(pokemon.name == namePokemon){
-        return pokemon;
-      } else {
-        return "error";
-      }
-    }
-  },
+    let pokeInfo=[];
+    data.forEach((data )=>{
+       if (data.name == namePokemon){
+             pokeInfo= data;
+       }
+    });
+      return pokeInfo;
+},
 
   sortData:(data) =>{
 
@@ -27,21 +24,18 @@ window.data= {
       if (a.name < b.name){
         return -1;
       }
-      return 0;
+      // return 0;
     });
     return orderedPokemon;
   },
 
   computeData : (data, pokemonName, powerCombat) => {
-   let res = 0;
+    let res = 0;
    data.forEach(element => {
      if (element.name == pokemonName){
        if (element.multipliers != null){
          res = element.multipliers[0] * powerCombat;
        }
-       // else{
-       //   res="Este pokémon no cuenta con posibilidades extra para combate";
-       // }
      }
    });
    return res;

@@ -16,13 +16,9 @@ describe("filterData", ()=>{
   });
 
   it("Filter by name", () => {
-  expect(data.filterData(pokemon,'Charmander')).toBe(pokemon[3]);
+  expect(data.filterData(pokemon.pokemon,'Charmander')).toBe(pokemon.pokemon[3]);
   });
 
-
-  it("Filter by name", () => {
-  expect(data.filterData(pokemon,'hjhk')).toBe("error");
-  });
 
 
 
@@ -54,40 +50,5 @@ describe("computeData",()=>{
 
 });
 
-
-// describe('example', () => {
-//   it('is a function', () => {
-//     expect(typeof example).toBe('function');
-//   });
-//
-//   it('returns `example`', () => {
-//     expect(example()).toBe('example');
-//   });
-// });
-
-
-// describe("Pokemon", () => {
-//   it("should be an object", () => {
-//     expect(typeof pokemon).toBe("object");
-//   });
-// });
-//
-// describe("Filter", () => {
-//   it("should filter my pokemon by name", () => {
-//     expect(filterPokemon( pokemon, "name").toBe();
-//   });
-// });
-//
-// describe("My function", () =>{
-//   it("should return balbasour name", () => {
-//     expect(showBulbasaurName(pokemon))
-//   })
-// })
-
-// debe estar en data.js
-// const filterPokemon=(pokemon,rule)=> pokemon ...;
-// const showBulbasaurName=(POKEMON)=>{
-//   return POKEMON.pokemon[0].name;
-// };
 
 

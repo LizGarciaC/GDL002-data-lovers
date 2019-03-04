@@ -106,8 +106,14 @@ btnCalcularPC.addEventListener("click", () => {
   pokemon = document.getElementById("selectedPokemon").innerHTML;
   let powerCombat = txtPC.value;
   let resPC = data.computeData(window.POKEMON.pokemon,pokemon, powerCombat);
-  txtResPC.innerHTML = resPC;
-  txtPC.value = "";
+  if(resPC==0){
+    txtResPC.innerHTML = "Este pokemon no cuenta con más poder de combate ";
+    txtPC.value = "";
+  } else{
+    txtResPC.innerHTML = "EL rango de poder de combate es: " + resPC;
+    txtPC.value = "";
+  }
+
 });
 
 
@@ -133,9 +139,9 @@ showSlides(slideIndex);
 // let dots=document.getElementByClassName("dot");
 // currentSlide(n);
 
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
 
 function showSlides(n) {

@@ -19,8 +19,19 @@
       max-height: 30px;
       font-size: 5vw;
     }
+    .listPokemon{
+      max-width: 100%;
+    }
+    #generalList{
+      max-width: 10%;
+      max-height: 80%;
+      font-family: Garamond;
+      font-size: 16px;
+      text-align: center;
+      display: grid;
+    }
 
- }
+}
 
  @media only screen and (max-width:768px) {
     .containerPokedex, .Pokedex, .footer,{
@@ -198,7 +209,7 @@
    cursor: pointer;
    border-radius: 8px;
    font-family:Garamond;
-    font-size: 3vw;
+  font-size: 3vw;
  }
 
  .btn:hover {
@@ -218,18 +229,18 @@
 
 
  .listPokemon{
-   width: 50%;
+   width: 100%;
    font-family: Garamond;
    font-size: 16px;
-   margin-left: 20%;
-   border: 5px solid #fff;
-   color: #424242;
+   /* margin-left: 5%; */
+   /* border: 5px solid #fff;
+   color: #424242; */
    text-align: justify;
    display: none;
  }
 
  .pokemonImgs {
-   display: inline-block;
+   display: inline-table;
    background-color:GOLD;
    color: black;
    margin: 15px;
@@ -249,6 +260,7 @@
    padding: 0;
    align-items: center;
  }
+
  .Pokedex{
      width:auto;
      height:50%;
@@ -266,6 +278,7 @@
      background-color: #ee0007;
 
  }
+
  .PokedexDisplay{
      width: 88%;
      height: 60%;

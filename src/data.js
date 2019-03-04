@@ -24,7 +24,6 @@ window.data= {
       if (a.name < b.name){
         return -1;
       }
-      // return 0;
     });
     return orderedPokemon;
   },
@@ -37,25 +36,10 @@ window.data= {
          res = element.multipliers[0] * powerCombat;
 
        }
-       //else{
-         //res="Este pokémon no cuenta con posibilidades extra para combate";
-       //}
      }
    });
    return res;
  }
 
 
-
 };
-
-// const filterPokemon=(pokemon,rule)=> pokemon ...;
-// const showBulbasaurName=(POKEMON)=>{
-//   return POKEMON.pokemon[0].name;
-// };
-//
-// window.example=example;
-// window.dataLovers={
-//   showBulbasaurName
-
-// }

@@ -129,85 +129,52 @@
 
  /* --------------------------imagens del slide-----------------------------  */
 
- /* * Slideshow container */
- .slideshow-container {
-   max-width: 800px;
-   margin: auto;
- }
-
- img{
-   vertical-align: middle;
-   width: 100%;
- }
-
- .text {
-   text-align: justify;
-   background-color: #222;
-   padding: 2px 16px;
-   color: white;
-   font-family:'Bookman, URW Bookman L', serif;
-   font-size: 1.5vw;
- }
-
- /* The dots/bullets/indicators */
- .dot {
-   cursor: pointer;
-   height: 15px;
-   width: 15px;
-   margin: 0 2px;
-   background-color: #bbb;
-   border-radius: 50%;
-   display: inline-block;
-   transition: background-color 0.6s ease;
- }
-
- .active, .dot:hover {
-   background-color: #717171;
- }
-
- /* Fading animation */
- .fade {
-   -webkit-animation-name: fade;
-   -webkit-animation-duration: 1.5s;
-   animation-name: fade;
-   animation-duration: 1.5s;
- }
-
- @-webkit-keyframes fade {
-   from {opacity: .4}
-   to {opacity: 1}
- }
-
- @keyframes fade {
-   from {opacity: .4}
-   to {opacity: 1}
- }
-
-
- /* ----------------- botones (ver más pokemon y buscar pokedex) --------------*/
-.divOrdenAlfabetico .btn{
-  width: 50%;
+ div.gallery {
+  border: 1px solid #ccc;
 }
 
- .btn{
-   background-color:DARKRED;
-   border: none;
-   color:white;
-   padding: 10px 5px;
-   text-align: justify;
-   cursor: pointer;
-   border-radius: 8px;
-   font-family:Garamond;
-    font-size: 3vw;
- }
+div.gallery:hover {
+  border: 1px solid #777;
+}
 
- .btn:hover {
-   background-color: #00BFFF;
- }
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
 
- /* .info{
-   margin-left: 20%;
- } */
+div.desc {
+  padding: 15px;
+  text-align: justify;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
  /* --------------------------- Listado de pokemons --------------------------- */
  .inputDesign{
    width: 200px;
@@ -608,4 +575,7 @@
   background-color: dodgerblue;
   color: white;
   text-align: center;
+ }
+ .btn-pok {
+   cursor: pointer;
  }

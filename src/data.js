@@ -28,6 +28,14 @@ window.data = {
     return orderedPokemon;
   },
 
+
+sortDataDes: (data) =>{
+return window.data.sortData(data).reverse();
+
+},
+
+
+
   computeData: (data, pokemonName, powerCombat) => {
     let res = 0;
     data.forEach(element => {

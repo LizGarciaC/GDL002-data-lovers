@@ -11,6 +11,7 @@ aboutPokemon.style.display = "none";
 let home = document.getElementById("home");
 
 showAbout.addEventListener('click', () => {
+
   pokedex.style.display = "none";
   listaPokemon.style.display = "none";
   pantallaPrincipal.style.display = "none";
@@ -28,8 +29,9 @@ home.addEventListener('click', () => {
 });
 
 
-let showMorePokemon = document.getElementById("showMorePokemon");
+// Funcion para mostrar todos los pokemon
 
+let showMorePokemon = document.getElementById("showMorePokemon");
 showMorePokemon.addEventListener('click', () => {
   pantallaPrincipal.style.display = "none";
   listaPokemon.style.display = "block";
@@ -40,21 +42,21 @@ showMorePokemon.addEventListener('click', () => {
   //  pokemonBox.innerHTML="Pokemon Región Kanto";
   let htmlBox = "";
   for (let contPokemon = 0; contPokemon < pokemonList.length; contPokemon++) {
-    htmlBox += `<section class="pokemonImgs"><span>${pokemonList[contPokemon].num} ${pokemonList[contPokemon].name}
-                    <div><img src="${pokemonList[contPokemon].img}"/></div></span></section>`;
+    htmlBox += `<section class="pokemonImgs"><btn class="btn-pok">${pokemonList[contPokemon].num} ${pokemonList[contPokemon].name}
+                    <div><img src="${pokemonList[contPokemon].img}"/></div></btn></section>`;
   }
   pokemonBox.innerHTML = htmlBox;
 
 });
 
-// Funcion para buscar el pokemon
+// FUNCION BUSCAR UN POKEMON
 let searchPokemon = document.getElementById("searchPokemon");
 
 searchPokemon.addEventListener('click', () => {
 
   pantallaPrincipal.style.display = "none";
   listaPokemon.style.display = "none";
-  //  ordenAlfabetico.style.display="none";
+ //ordenAlfabetico.style.display="none";
   pokedex.style.display = "block";
 
   document.getElementById("searchBtn").addEventListener("click", searchPoke);
@@ -77,26 +79,45 @@ searchPokemon.addEventListener('click', () => {
 
   }
 
-  function printFirstData(pokemon) {
+  let printFirstData=(pokemon)=> {
 
     let pokedex = document.getElementById("pokedexx");
-
-    pokedex.innerHTML = ` <strong>Nombre:  </strong><span id='selectedPokemon'>${pokemon.name}</span><div><img src="${pokemon.img}"/></div>
+    let evolution = pokemon.next_evolution==null ? "--": pokemon.next_evolution[0].name;
+    pokedex.innerHTML = `<strong>Nombre:  </strong><span id='selectedPokemon'>${pokemon.name}</span><div><img src="${pokemon.img}"/></div>
                        <strong>Número:  </strong>${pokemon.num} <br/> <strong>Tipo:    </strong>${pokemon.type} <br/> <strong>Altura:  </strong>${pokemon.height} <br/>
-                       <strong>Peso:    </strong>${pokemon.weight} <br/> <strong>Debilidade(s):  </strong> ${pokemon.weaknesses}`;
+                       <strong>Peso:    </strong>${pokemon.weight} <br/> <strong>Debilidade(s):  </strong> ${pokemon.weaknesses} <br/> <strong>Evolución:  </strong><span id="pokemonEvolution">${evolution}</span>`;
   }
 
 });
 
+
+// FUNCION LIMPIAR PANTALLA
 clearBtn.addEventListener("click", () => {
   document.getElementById("txtResPC").innerHTML = "";
   document.getElementById("pokedexx").innerHTML = "";
+  document.getElementById("evPokemon").src = "";
+
 });
 
+let pokemonNextEvolucion=document.getElementById("btnEvolution");
+pokemonNextEvolucion.addEventListener("click", ()=>{
+let evolutionName=document.getElementById("pokemonEvolution").innerHTML;
+
+let filterEvolution=data.filterData(window.POKEMON.pokemon, evolutionName);
+if (filterEvolution.name==null){
+  confirm("Este pokemón no tiene evolución");
+}
+//alert(filterEvolution.name);
+let showEvolution=document.getElementById("evPokemon");
+
+showEvolution.src=filterEvolution.img;
+// document.innerHTML=filterEvolution.img;
+}
+
+);
 
 
-
-// calculo de puntos de combate
+// FUNCION CALCULAR PODER DE COMBATE
 let btnCalcularPC = document.getElementById("btnCalcularPC");
 let txtPC = document.getElementById("txtPC");
 let txtResPC = document.getElementById("txtResPC");
@@ -112,45 +133,37 @@ btnCalcularPC.addEventListener("click", () => {
 
 
 
-// ORDENAR Alfabéticamente
+// FUNCIÓN ORDENAR ALFABETICAMENTE ASCENDENTE
 let orderAlpha = document.getElementById("btnOrderAlpha");
 orderAlpha.addEventListener("click", () => {
   let pokemonList = data.sortData(window.POKEMON.pokemon);
   let pokemonBox = document.getElementById("generalList");
   let htmlBox = "";
   for (let contPokemon = 0; contPokemon < pokemonList.length; contPokemon++) {
-    htmlBox += `<section class="pokemonImgs"><span>${pokemonList[contPokemon].num} ${pokemonList[contPokemon].name}
-                  <div><img src="${pokemonList[contPokemon].img}"/></div></span></section>`;
+    htmlBox += `<section class="pokemonImgs"><btn class="btn-pok">${pokemonList[contPokemon].num} ${pokemonList[contPokemon].name}
+                  <div><img src="${pokemonList[contPokemon].img}"/></div></btn></section>`;
+  }
+  pokemonBox.innerHTML = htmlBox;
+});
+
+// FUNCIÓN ORDENAR ALFABETICAMENTE DESCENDENTE
+let btnOrderAlphaDes = document.getElementById("btnOrderAlphaDes");
+btnOrderAlphaDes.addEventListener("click", () => {
+  //alert("Click Registrado");
+  let pokemonList = data.sortDataDes(window.POKEMON.pokemon);
+  let pokemonBox = document.getElementById("generalList");
+  let htmlBox = "";
+  for (let contPokemon = 0; contPokemon < pokemonList.length; contPokemon++) {
+    htmlBox += `<section class="pokemonImgs"><btn class="btn-pok">${pokemonList[contPokemon].num} ${pokemonList[contPokemon].name}
+                  <div><img src="${pokemonList[contPokemon].img}"/></div></btn></section>`;
   }
   pokemonBox.innerHTML = htmlBox;
 });
 
 
-// -------------------------------- para las imagenes-----------------
-
-let slideIndex = 1;
-showSlides(slideIndex);
-// let dots=document.getElementByClassName("dot");
-// currentSlide(n);
-
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
 
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  // let currentSlide = 0;
-  if (n > slides.length) { slideIndex = 1; }
-  if (n < 1) { slideIndex = slides.length; }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
+
+
+
+
